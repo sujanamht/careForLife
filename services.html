@@ -11,11 +11,11 @@
       theme: {
         extend: {
           colors: {
-              brand: {
-                blue: '#0f85b8',
-                green: '#53821d',
-                orange: '#cf8332'
-              },
+            brand: {
+              blue: '#0f85b8',
+              green: '#53821d',
+              orange: '#cf8332'
+            },
             text: '#1F2933',
             surface: '#F7F9FC'
           }
@@ -23,39 +23,47 @@
       }
     }
   </script>
+  <style>
+    .hero-title {
+      text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.5);
+      letter-spacing: -0.02em;
+    }
+    .hero-subtitle {
+      text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.6);
+    }
+  </style>
 </head>
 <body class="bg-white text-text font-sans">
   <!-- Navigation -->
-  <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
         <a href="index.html" class="flex items-center space-x-2">
-          <img src="assets/logo.png" alt="Care for Life Logo" class="h-10 w-auto" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+          <img src="assets/logo.png" alt="Care for Life Logo" class="h-12 w-auto" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
           <span class="text-xl font-semibold text-brand-green hidden">Care for Life</span>
-          <span class="text-xl font-semibold text-brand-green">Care for Life</span>
         </a>
         <div class="hidden md:flex items-center space-x-6">
-          <a href="index.html" class="text-text hover:text-brand-green transition-colors">Home</a>
-          <a href="about.html" class="text-text hover:text-brand-green transition-colors">About</a>
-          <a href="services.html" class="text-brand-green font-medium border-b-2 border-brand-green pb-1">Services</a>
-          <a href="host-homes.html" class="text-text hover:text-brand-green transition-colors">Host Homes</a>
-          <a href="who-we-serve.html" class="text-text hover:text-brand-green transition-colors">Who We Serve</a>
-          <a href="training-quality.html" class="text-text hover:text-brand-green transition-colors">Training & Quality</a>
-          <a href="safety-compliance.html" class="text-text hover:text-brand-green transition-colors">Safety</a>
-          <a href="contact.html" class="text-text hover:text-brand-green transition-colors">Contact</a>
+          <a href="index.html" class="text-brand-blue hover:text-brand-green transition-colors">Home</a>
+          <a href="about.html" class="text-brand-blue hover:text-brand-green transition-colors">About</a>
+          <a href="services.html" class="font-medium text-brand-green">Services</a>
+          <a href="host-homes.html" class="text-brand-blue hover:text-brand-green transition-colors">Host Homes</a>
+          <a href="who-we-serve.html" class="text-brand-blue hover:text-brand-green transition-colors">Who We Serve</a>
+          <a href="training-quality.html" class="text-brand-blue hover:text-brand-green transition-colors">Training & Quality</a>
+          <a href="safety-compliance.html" class="text-brand-blue hover:text-brand-green transition-colors">Safety</a>
+          <a href="contact.html" class="text-brand-blue hover:text-brand-green transition-colors">Contact</a>
         </div>
-        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md hover:bg-surface focus:outline-none focus:ring-2 focus:ring-brand-green" aria-label="Open menu">
-          <svg class="h-6 w-6 text-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-brand-green" aria-label="Open menu">
+          <svg class="h-6 w-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
         </button>
       </div>
       <!-- Mobile Menu -->
-      <div id="mobile-menu" class="hidden md:hidden pb-4">
+      <div id="mobile-menu" class="hidden md:hidden pb-4 bg-white/95 rounded-lg mt-2 p-4">
         <div class="flex flex-col space-y-3">
           <a href="index.html" class="text-text hover:text-brand-green px-2 py-1">Home</a>
           <a href="about.html" class="text-text hover:text-brand-green px-2 py-1">About</a>
-          <a href="services.html" class="text-brand-green font-medium px-2 py-1 bg-surface rounded">Services</a>
+          <a href="services.html" class="text-brand-green font-medium px-2 py-1">Services</a>
           <a href="host-homes.html" class="text-text hover:text-brand-green px-2 py-1">Host Homes</a>
           <a href="who-we-serve.html" class="text-text hover:text-brand-green px-2 py-1">Who We Serve</a>
           <a href="training-quality.html" class="text-text hover:text-brand-green px-2 py-1">Training & Quality</a>
@@ -67,11 +75,26 @@
   </header>
 
   <main>
-    <!-- Page Header -->
-    <section class="bg-surface py-12 sm:py-16">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 class="text-3xl sm:text-4xl font-bold text-brand-blue mb-4">Our Services</h1>
-        <p class="text-lg text-text max-w-3xl">Community-based residential supports through New Hampshire's Enhanced Family Care program.</p>
+    <!-- Hero Section with Background -->
+    <section 
+      class="relative bg-cover bg-center bg-no-repeat"
+      style="background-image: url('assets/service.png'); height: 60vh;"
+    >
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-white/50"></div>
+      
+      <!-- Content positioned at bottom -->
+      <div class="absolute bottom-0 left-0 right-0 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-2xl text-left">
+            <h1 class="hero-title text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-blue mb-4">
+              Our Services
+            </h1>
+            <p class="hero-subtitle text-xl text-brand-blue/90 font-medium">
+              Community-based residential supports through New Hampshire's Enhanced Family Care program.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -126,68 +149,83 @@
     <!-- Support Areas -->
     <section class="py-12 sm:py-16 bg-surface">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-2xl font-bold text-brand-blue mb-8">Support Areas</h2>
-        <p class="text-text mb-8 max-w-3xl">Host home caregivers provide assistance in various areas based on each individual's service plan and assessed needs:</p>
+        <h2 class="text-2xl font-bold text-brand-blue mb-8 text-center">Support Areas</h2>
         
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
-            <div class="w-10 h-10 bg-brand-blue bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-5 h-5 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <!-- Card 1 -->
+          <div
+          class=" bg-white p-6 rounded-xl border border-gray-100 shadow-sm"
+        >
+          <div class="flex items-center gap-4 mb-3">
+            <div
+              class="w-10 h-10 bg-brand-green bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0"
+            > <svg class="w-5 h-5 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
               </svg>
             </div>
-            <h3 class="font-semibold text-lg text-brand-blue mb-2">Daily Living Supports</h3>
-            <p class="text-text text-sm">Assistance with personal care, meal preparation, household tasks, and routines.</p>
+            <h3 class="font-semibold text-lg text-brand-green">Daily Living Supports</h3>
           </div>
+          <p class="text-text">Assistance with personal care, meal preparation, household tasks, and routines.</p>
+           </div>
           
           <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
-            <div class="w-10 h-10 bg-brand-blue bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-5 h-5 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
-              </svg>
+            <div class="flex items-center gap-4 mb-3">
+              <div class="w-10 h-10 bg-brand-green bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                </svg>
+              </div>
+              <h3 class="font-semibold text-lg text-brand-green">Supervision</h3>
             </div>
-            <h3 class="font-semibold text-lg text-brand-blue mb-2">Supervision</h3>
             <p class="text-text text-sm">Appropriate oversight based on individual needs for safety and well-being.</p>
           </div>
           
           <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
-            <div class="w-10 h-10 bg-brand-blue bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-5 h-5 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
-              </svg>
+            <div class="flex items-center gap-4 mb-3">
+              <div class="w-10 h-10 bg-brand-green bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </div>
+              <h3 class="font-semibold text-lg text-brand-green">Community Participation</h3>
             </div>
-            <h3 class="font-semibold text-lg text-brand-blue mb-2">Community Participation</h3>
             <p class="text-text text-sm">Support for engaging in community activities, social opportunities, and local events.</p>
           </div>
           
           <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
-            <div class="w-10 h-10 bg-brand-blue bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-5 h-5 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-              </svg>
+            <div class="flex items-center gap-4 mb-3">
+              <div class="w-10 h-10 bg-brand-green bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                </svg>
+              </div>
+              <h3 class="font-semibold text-lg text-brand-green">Skill Development</h3>
             </div>
-            <h3 class="font-semibold text-lg text-brand-blue mb-2">Skill Development</h3>
             <p class="text-text text-sm">Opportunities to learn and practice new skills aligned with individual goals.</p>
           </div>
           
           <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
-            <div class="w-10 h-10 bg-brand-blue bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-5 h-5 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-              </svg>
+            <div class="flex items-center gap-4 mb-3">
+              <div class="w-10 h-10 bg-brand-green bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <h3 class="font-semibold text-lg text-brand-green">Coordination</h3>
             </div>
-            <h3 class="font-semibold text-lg text-brand-blue mb-2">Coordination</h3>
             <p class="text-text text-sm">Communication with service coordinators, families, and other support team members.</p>
           </div>
           
           <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
-            <div class="w-10 h-10 bg-brand-blue bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-5 h-5 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
-              </svg>
+            <div class="flex items-center gap-4 mb-3">
+              <div class="w-10 h-10 bg-brand-green bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+                </svg>
+              </div>
+              <h3 class="font-semibold text-lg text-brand-green">Transportation</h3>
             </div>
-            <h3 class="font-semibold text-lg text-brand-blue mb-2">Transportation</h3>
             <p class="text-text text-sm">Assistance with transportation to appointments, activities, and community destinations.</p>
           </div>
         </div>
@@ -239,10 +277,25 @@
   </footer>
 
   <script>
+    // Mobile menu toggle
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     mobileMenuBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
+    });
+
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80) {
+        navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+        navbar.style.backdropFilter = 'blur(10px)';
+        navbar.style.boxShadow = '0 1px 3px rgba(0,0,0,0.1)';
+      } else {
+        navbar.style.backgroundColor = 'transparent';
+        navbar.style.backdropFilter = 'none';
+        navbar.style.boxShadow = 'none';
+      }
     });
   </script>
 </body>
