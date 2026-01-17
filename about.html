@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Care for Life Home Services</title>
+  <meta name="description" content="Learn about Care for Life Home Services, our mission, values, and commitment to supporting individuals with developmental disabilities in New Hampshire.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#0f85b8',
+              green: '#53821d',
+              orange: '#cf8332'
+            },
+            text: '#1F2933',
+            surface: '#F7F9FC'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white text-text font-sans">
+  <!-- Navigation -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="index.html" class="flex items-center space-x-2">
+          <img src="assets/logo.png" alt="Care for Life Logo" class="h-12 w-auto" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+          <span class="text-xl font-semibold text-brand-green hidden">Care for Life</span>
+        </a>
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="index.html" class="text-brand-blue hover:text-brand-green transition-colors">Home</a>
+          <a href="about.html" class="font-medium text-brand-green">About</a>
+          <a href="services.html" class="text-brand-blue hover:text-brand-green transition-colors">Services</a>
+          <a href="host-homes.html" class="text-brand-blue hover:text-brand-green transition-colors">Host Homes</a>
+          <a href="training-quality.html" class="text-brand-blue hover:text-brand-green transition-colors">Training & Quality</a>
+          <a href="contact.html" class="text-brand-blue hover:text-brand-green transition-colors">Contact</a>
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-brand-green" aria-label="Open menu">
+          <svg class="h-6 w-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden pb-4 bg-white/95 rounded-lg mt-2 p-4">
+        <div class="flex flex-col space-y-3">
+          <a href="index.html" class="text-text hover:text-brand-green px-2 py-1">Home</a>
+          <a href="about.html" class="text-brand-green font-medium px-2 py-1">About</a>
+          <a href="services.html" class="text-text hover:text-brand-green px-2 py-1">Services</a>
+          <a href="host-homes.html" class="text-text hover:text-brand-green px-2 py-1">Host Homes</a>
+          <a href="training-quality.html" class="text-text hover:text-brand-green px-2 py-1">Training & Quality</a>
+          <a href="contact.html" class="text-text hover:text-brand-green px-2 py-1">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section with Background -->
+    <section 
+      class="relative pt-24 pb-16 sm:pb-20 bg-cover bg-center bg-no-repeat min-h-[50vh] flex items-center"
+      style="background-image: url('assets/about.jpeg');"
+    >
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black/70"></div>
+      
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="max-w-2xl">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+            About Us
+          </h1>
+          <p class="text-xl text-white/90 mb-8">
+            Learn about our organization and our commitment to person-centered community living supports in New Hampshire.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="py-12 sm:py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <h2 class="text-2xl font-bold text-brand-blue mb-6">Who We Are</h2>
+          <p class="text-text mb-4">
+            Care for Life Home Services, LLC is a provider of community-based residential supports for adults with developmental disabilities in New Hampshire. We coordinate Enhanced Family Care (EFC) / Host Home services, connecting individuals with trained caregivers who share their homes.
+          </p>
+          <p class="text-text">
+            Our role includes recruiting, screening, training, and providing ongoing support to host home caregivers, while maintaining oversight to help ensure quality services and individual well-being.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Values -->
+    <section class="py-12 sm:py-16 bg-surface">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12">
+          <div>
+            <h2 class="text-2xl font-bold text-brand-blue mb-6">Our Mission</h2>
+            <p class="text-text">
+              To support individuals with developmental disabilities in living within their communities with dignity, choice, and the opportunity for meaningful participation in daily life.
+            </p>
+          </div>
+          <div>
+            <h2 class="text-2xl font-bold text-brand-blue mb-6">Our Values</h2>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-brand-green rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <span class="text-text"><strong class="text-brand-blue">Dignity & Respect</strong> — Honoring each person's individuality and preferences</span>
+              </li>
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-brand-green rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <span class="text-text"><strong class="text-brand-blue">Person-Centered Approach</strong> — Services guided by individual needs and goals</span>
+              </li>
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-brand-green rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <span class="text-text"><strong class="text-brand-blue">Community Inclusion</strong> — Supporting connections and participation in community life</span>
+              </li>
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-brand-green rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <span class="text-text"><strong class="text-brand-blue">Safety & Accountability</strong> — Ongoing oversight and commitment to individual well-being</span>
+              </li>
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-brand-green rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <span class="text-text"><strong class="text-brand-blue">Collaboration</strong> — Working with individuals, families, and service coordinators</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Commitment Section -->
+    <section class="py-12 sm:py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <h2 class="text-2xl font-bold text-brand-blue mb-6">Our Commitment</h2>
+          <div class="bg-surface p-8 rounded-xl border border-gray-100">
+            <p class="text-text mb-4">
+              We are committed to maintaining high standards in the supports we coordinate. This includes:
+            </p>
+            <ul class="space-y-2 text-text">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-brand-green mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>Thorough caregiver screening and training processes</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-brand-green mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>Regular monitoring and quality assurance activities</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-brand-green mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>Adherence to state regulations and waiver requirements</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-brand-green mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>Ongoing caregiver support and professional development</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-brand-green mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>Transparent communication with all stakeholders</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-12 sm:py-16 bg-surface">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-2xl font-bold text-brand-blue mb-4">Questions?</h2>
+        <p class="text-text mb-6">We welcome inquiries from families, individuals, and professionals.</p>
+        <a href="contact.html" class="inline-block bg-brand-green text-white px-8 py-3 rounded-lg font-medium hover:bg-opacity-90 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green focus:ring-offset-2">
+          Contact Us
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-brand-blue text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <h4 class="font-semibold text-lg mb-4">Care for Life Home Services, LLC</h4>
+          <p class="text-white text-opacity-80 text-sm">Serving New Hampshire (NH)</p>
+        </div>
+        <div>
+          <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="services.html" class="text-white text-opacity-80 hover:text-opacity-100 transition-colors">Services</a></li>
+            <li><a href="host-homes.html" class="text-white text-opacity-80 hover:text-opacity-100 transition-colors">Host Homes</a></li>
+            <li><a href="contact.html" class="text-white text-opacity-80 hover:text-opacity-100 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-lg mb-4">Disclaimer</h4>
+          <p class="text-white text-opacity-80 text-sm">Information provided is for general purposes and may be updated.</p>
+        </div>
+      </div>
+      <div class="border-t border-white border-opacity-20 mt-8 pt-8 text-center text-sm text-white text-opacity-60">
+        <p>&copy; 2026 Care for Life Home Services, LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80) {
+        navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+        navbar.style.backdropFilter = 'blur(10px)';
+        navbar.style.boxShadow = '0 1px 3px rgba(0,0,0,0.1)';
+      } else {
+        navbar.style.backgroundColor = 'transparent';
+        navbar.style.backdropFilter = 'none';
+        navbar.style.boxShadow = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
