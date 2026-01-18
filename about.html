@@ -5,13 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us | Care for Life Home Services</title>
   <meta name="description" content="Learn about Care for Life Home Services, our mission, values, and commitment to supporting individuals with developmental disabilities in New Hampshire.">
+  <!-- Sofia Pro Font -->
+  <link rel="stylesheet" href="https://use.typekit.net/xxxxxxx.css" />
+  <!-- Spectral Font from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/sofia-pro');
+  </style>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
+          fontFamily: {
+            sans: ['"Sofia Pro"', 'system-ui', 'sans-serif'],
+            title: ['"Spectral"', 'system-ui', 'serif'],
+          },
           colors: {
             brand: {
+              blueDark: "#083d69",
               blue: '#0f85b8',
               green: '#53821d',
               orange: '#cf8332'
@@ -23,74 +37,28 @@
       }
     }
   </script>
-  <style>
-    .hero-title {
-      text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.5);
-      letter-spacing: -0.02em;
-    }
-    .hero-subtitle {
-      text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.6);
-    }
-  </style>
 </head>
 <body class="bg-white text-text font-sans">
-  <!-- Navigation -->
-  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16">
-        <a href="index.html" class="flex items-center space-x-2">
-          <img src="assets/logo.png" alt="Care for Life Logo" class="h-12 w-auto" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
-          <span class="text-xl font-semibold text-brand-green hidden">Care for Life</span>
-        </a>
-        <div class="hidden md:flex items-center space-x-6">
-          <a href="index.html" class="text-brand-blue hover:text-brand-green transition-colors">Home</a>
-          <a href="about.html" class="font-medium text-brand-green">About</a>
-          <a href="services.html" class="text-brand-blue hover:text-brand-green transition-colors">Services</a>
-          <a href="host-homes.html" class="text-brand-blue hover:text-brand-green transition-colors">Host Homes</a>
-          <a href="who-we-serve.html" class="text-brand-blue hover:text-brand-green transition-colors">Who We Serve</a>
-          <a href="training-quality.html" class="text-brand-blue hover:text-brand-green transition-colors">Training & Quality</a>
-          <a href="safety-compliance.html" class="text-brand-blue hover:text-brand-green transition-colors">Safety</a>
-          <a href="contact.html" class="text-brand-blue hover:text-brand-green transition-colors">Contact</a>
-        </div>
-        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-brand-green" aria-label="Open menu">
-          <svg class="h-6 w-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-        </button>
-      </div>
-      <!-- Mobile Menu -->
-      <div id="mobile-menu" class="hidden md:hidden pb-4 bg-white/95 rounded-lg mt-2 p-4">
-        <div class="flex flex-col space-y-3">
-          <a href="index.html" class="text-text hover:text-brand-green px-2 py-1">Home</a>
-          <a href="about.html" class="text-brand-green font-medium px-2 py-1">About</a>
-          <a href="services.html" class="text-text hover:text-brand-green px-2 py-1">Services</a>
-          <a href="host-homes.html" class="text-text hover:text-brand-green px-2 py-1">Host Homes</a>
-          <a href="training-quality.html" class="text-text hover:text-brand-green px-2 py-1">Training & Quality</a>
-          <a href="contact.html" class="text-text hover:text-brand-green px-2 py-1">Contact</a>
-        </div>
-      </div>
-    </nav>
-  </header>
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
 
   <main>
     <!-- Hero Section with Background -->
     <section 
       class="relative bg-cover bg-center bg-no-repeat"
-      style="background-image: url('assets/about.jpg'); height: 60vh;"
+      style="background-image: url('assets/about.jpg'); height: 50vh;"
     >
       <!-- Overlay -->
-      <div class="absolute inset-0 bg-white/50"></div>
+      <div class="absolute inset-0 bg-black/50"></div>
       
       <!-- Content positioned at bottom -->
-      <div class="absolute bottom-0 left-0 right-0 pb-10">
+      <div class="absolute bottom-0 left-0 right-0 pb-4">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="max-w-2xl text-left">
-            <h1 class="hero-title text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-blue mb-4">
-              About Us
+            <h1 class="font-title text-[46px] sm:text-5xl lg:text-6xl font-semibold text-white mb-1">
+              Where Care Feels <br>
+              <span class="text-brand-blueDark">Like Family</span>
             </h1>
-            <p class="hero-subtitle text-xl text-brand-blue/90 font-medium">
-              Learn about our organization and our commitment to person-centered community living supports in New Hampshire.
-            </p>
           </div>
         </div>
       </div>
@@ -99,52 +67,117 @@
     <!-- Overview Section -->
     <section class="py-12 sm:py-16">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl">
-          <h2 class="text-2xl font-bold text-brand-blue mb-6">Who We Are</h2>
+        <div class="">
+          <p class="text-brand-blue font-medium mb-2">About Us</p>
+          <h2 class="text-5xl font-bold  text-brand-blueDark mb-6">Care for Life Home Services, LLC</h2>
+          <h2 class="text-5xl font-bold font-title text-brand-blueDark mb-6">Care for Life Home Services, LLC</h2>
+
           <p class="text-text mb-4">
-            Care for Life Home Services, LLC is a provider of community-based residential supports for adults with developmental disabilities in New Hampshire. We coordinate Enhanced Family Care (EFC) / Host Home services, connecting individuals with trained caregivers who share their homes.
-          </p>
+            Care for Life Home Services, LLC is a New Hampshire-based human services organization established to provide high-quality, person-centered supports to adults with developmental disabilities through home- and community-based service models.</p>
           <p class="text-text">
-            Our role includes recruiting, screening, training, and providing ongoing support to host home caregivers, while maintaining oversight to help ensure quality services and individual well-being.
-          </p>
+            The organization's primary and current service focus is the delivery of Enhanced Family Care (EFC) / Host Home services under New Hampshire's Developmental Disabilities (DD) Waiver. Care for Life Home Services, LLC is committed to supporting individuals in safe, stable, family-based living environments that promote independence, dignity, and community inclusion.</p>
         </div>
       </div>
     </section>
 
-    <!-- Mission & Values -->
-    <section class="py-12 sm:py-16 bg-surface">
+    <!-- Our Mission -->
+    <section class="py-16">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-12">
-          <div>
-            <h2 class="text-2xl font-bold text-brand-blue mb-6">Our Mission</h2>
-            <p class="text-text">
+        <div class="bg-gradient-to-r from-brand-blueDark to-brand-green rounded-2xl p-8 sm:p-12 text-center text-white">
+          <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-white mb-6">Our Mission</h2>
+            <p class="text-white">
               To support individuals with developmental disabilities in living within their communities with dignity, choice, and the opportunity for meaningful participation in daily life.
             </p>
           </div>
-          <div>
-            <h2 class="text-2xl font-bold text-brand-blue mb-6">Our Values</h2>
-            <ul class="space-y-3">
-              <li class="flex items-start">
-                <span class="w-2 h-2 bg-brand-green rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span class="text-text"><strong class="text-brand-blue">Dignity & Respect</strong> — Honoring each person's individuality and preferences</span>
-              </li>
-              <li class="flex items-start">
-                <span class="w-2 h-2 bg-brand-green rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span class="text-text"><strong class="text-brand-blue">Person-Centered Approach</strong> — Services guided by individual needs and goals</span>
-              </li>
-              <li class="flex items-start">
-                <span class="w-2 h-2 bg-brand-green rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span class="text-text"><strong class="text-brand-blue">Community Inclusion</strong> — Supporting connections and participation in community life</span>
-              </li>
-              <li class="flex items-start">
-                <span class="w-2 h-2 bg-brand-green rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span class="text-text"><strong class="text-brand-blue">Safety & Accountability</strong> — Ongoing oversight and commitment to individual well-being</span>
-              </li>
-              <li class="flex items-start">
-                <span class="w-2 h-2 bg-brand-green rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span class="text-text"><strong class="text-brand-blue">Collaboration</strong> — Working with individuals, families, and service coordinators</span>
-              </li>
-            </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Values -->
+    <section class="py-12 sm:py-16 bg-surface">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="mb-10">
+          <p class="text-brand-blue font-medium mb-2">Our Values</p>
+          <h2 class="text-4xl sm:text-4xl font-semibold text-brand-blueDark mb-2">What drives us to <br><span class="font-bold text-5xl text-brand-green">Serve with Heart</span></h2>
+        </div>
+
+        <!-- Values Grid -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Person-Centered Care -->
+          <div class="group col-span-2">
+            <div class="overflow-hidden rounded-2xl mb-4 ">
+              <img src="assets/values/person-centered.jpg" alt="Person-Centered Care" class="w-full h-60 object-cover group-hover:scale-90 transition-transform duration-300">
+            </div>
+            <h3 class="text-xl font-bold text-brand-blueDark mb-2">Person-Centered Care</h3>
+            <p class="text-text/80 text-sm mb-3">Services tailored to each individual's strengths, preferences, and personal goals for meaningful daily living.</p>
+            <a href="services.html" class="inline-flex items-center text-brand-blue font-medium text-sm hover:text-brand-green transition-colors">
+              Learn More
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Health & Safety -->
+          <div class="group">
+            <div class="overflow-hidden rounded-2xl mb-4">
+              <img src="assets/values/health.png" alt="Health & Safety" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <h3 class="text-xl font-bold text-brand-blueDark mb-2">Health & Safety</h3>
+            <p class="text-text/80 text-sm mb-3">Strong policies, comprehensive training, and continuous oversight to ensure the wellbeing of all individuals.</p>
+            <a href="safety-compliance.html" class="inline-flex items-center text-brand-blue font-medium text-sm hover:text-brand-green transition-colors">
+              Learn More
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Community Inclusion -->
+          <div class="group">
+            <div class="overflow-hidden rounded-2xl mb-4">
+              <img src="assets/values/community.jpg" alt="Community Inclusion" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <h3 class="text-xl font-bold text-brand-blueDark mb-2">Community Inclusion</h3>
+            <p class="text-text/80 text-sm mb-3">Supporting individuals to live, participate, and thrive fully within their local communities.</p>
+            <a href="who-we-serve.html" class="inline-flex items-center text-brand-blue font-medium text-sm hover:text-brand-green transition-colors">
+              Learn More
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Partnership -->
+          <div class="group">
+            <div class="overflow-hidden rounded-2xl mb-4">
+              <img src="assets/values/partnership.jpg" alt="Partnership" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <h3 class="text-xl font-bold text-brand-blueDark mb-2">Partnership</h3>
+            <p class="text-text/80 text-sm mb-3">Collaboration with families, guardians, host families, and community partners is central to our service delivery.</p>
+            <a href="host-homes.html" class="inline-flex items-center text-brand-blue font-medium text-sm hover:text-brand-green transition-colors">
+              Learn More
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Compliance & Integrity -->
+          <div class="group">
+            <div class="overflow-hidden rounded-2xl mb-4">
+              <img src="assets/values/compliance.png" alt="Compliance & Integrity" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <h3 class="text-xl font-bold text-brand-blueDark mb-2">Compliance & Integrity</h3>
+            <p class="text-text/80 text-sm mb-3">Full adherence to NH DHHS, BDS, and Medicaid requirements with unwavering ethical standards.</p>
+            <a href="training-quality.html" class="inline-flex items-center text-brand-blue font-medium text-sm hover:text-brand-green transition-colors">
+              Learn More
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </a>
           </div>
         </div>
       </div>
@@ -153,109 +186,95 @@
     <!-- Commitment Section -->
     <section class="py-12 sm:py-16">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl">
-          <h2 class="text-2xl font-bold text-brand-blue mb-6">Our Commitment</h2>
-          <div class="bg-surface p-8 rounded-xl border border-gray-100">
-            <p class="text-text mb-4">
-              We are committed to maintaining high standards in the supports we coordinate. This includes:
-            </p>
-            <ul class="space-y-2 text-text">
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-brand-green mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                </svg>
-                <span>Thorough caregiver screening and training processes</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-brand-green mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                </svg>
-                <span>Regular monitoring and quality assurance activities</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-brand-green mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                </svg>
-                <span>Adherence to state regulations and waiver requirements</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-brand-green mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                </svg>
-                <span>Ongoing caregiver support and professional development</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-brand-green mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                </svg>
-                <span>Transparent communication with all stakeholders</span>
-              </li>
-            </ul>
+        <!-- Section Header -->
+        <div class="mb-10">
+          <p class="text-brand-blue font-medium mb-2">Our Commitment</p>
+          <h2 class="text-3xl sm:text-4xl font-semibold  text-brand-blueDark  mb-2 ">Care for Life, <br><span class=" font-bold text-5xl font-title text-brand-green">Working Collaboratively with:</span></h2>
+
+        </div>
+
+        <!-- Commitment Grid -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-gray-200">
+          <!-- NH DHHS -->
+          <div class="py-6 sm:py-0 sm:px-6 first:pl-0 flex items-center gap-4 col-span-2">
+            <div class="w-12 h-12 bg-brand-blue/10 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 3 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-brand-blueDark mb-2">NH DHHS – Bureau of Developmental Services</h3>
+           
           </div>
+
+          <!-- Area Agencies -->
+          <div class="py-6 sm:py-0 sm:px-6 flex items-center gap-4">
+            <div class="w-12 h-12 bg-brand-blue/10 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-brand-blueDark mb-2">Area Agencies</h3>
+           
+          </div>
+
+          
+        </div>
+
+        <!-- Second Row -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-gray-200 mt-8 pt-8 border-t border-gray-200">
+          <!-- Care Coordinators -->
+          <div class="py-6 sm:py-0 sm:px-6 first:pl-0 flex items-center gap-4">
+            <div class="w-12 h-12 bg-brand-blue/10 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-brand-blueDark mb-2">Care Coordinators</h3>
+           
+          </div>
+          <!-- Families -->
+          <div class="py-6 sm:py-0 sm:px-6 first:pl-0 flex items-center gap-4">
+            <div class="w-12 h-12 bg-brand-blue/10 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-brand-blueDark mb-2">Families & Guardians</h3>
+           
+          </div>
+
+          <!-- Community Partners -->
+          <div class="py-6 sm:py-0 sm:px-6 flex items-center gap-4">
+            <div class="w-12 h-12 bg-brand-blue/10 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-brand-blueDark mb-2">Community Partners</h3>
+           
+          </div>
+
+          
         </div>
       </div>
     </section>
 
     <!-- CTA Section -->
     <section class="py-12 sm:py-16 bg-surface">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-2xl font-bold text-brand-blue mb-4">Questions?</h2>
-        <p class="text-text mb-6">We welcome inquiries from families, individuals, and professionals.</p>
-        <a href="contact.html" class="inline-block bg-brand-green text-white px-8 py-3 rounded-lg font-medium hover:bg-opacity-90 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green focus:ring-offset-2">
+      <div class="bg-gradient-to-r from-brand-blueDark to-brand-green rounded-2xl p-8 sm:p-12 text-center text-white max-w-7xl mx-auto">
+        <h2 class="text-2xl font-bold text-white mb-4">Questions?</h2>
+        <p class="text-white/70 mb-6">We welcome inquiries from families, individuals, and professionals.</p>
+        <a href="contact.html" class="inline-block border-2 border-brand-orange text-brand-orange px-8 py-3 rounded-lg font-medium hover:bg-opacity-90 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-blueDark focus:ring-offset-2">
           Contact Us
         </a>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-brand-blue text-white py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-3 gap-8">
-        <div>
-          <h4 class="font-semibold text-lg mb-4">Care for Life Home Services, LLC</h4>
-          <p class="text-white text-opacity-80 text-sm">Serving New Hampshire (NH)</p>
-        </div>
-        <div>
-          <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
-          <ul class="space-y-2 text-sm">
-            <li><a href="services.html" class="text-white text-opacity-80 hover:text-opacity-100 transition-colors">Services</a></li>
-            <li><a href="host-homes.html" class="text-white text-opacity-80 hover:text-opacity-100 transition-colors">Host Homes</a></li>
-            <li><a href="contact.html" class="text-white text-opacity-80 hover:text-opacity-100 transition-colors">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-semibold text-lg mb-4">Disclaimer</h4>
-          <p class="text-white text-opacity-80 text-sm">Information provided is for general purposes and may be updated.</p>
-        </div>
-      </div>
-      <div class="border-t border-white border-opacity-20 mt-8 pt-8 text-center text-sm text-white text-opacity-60">
-        <p>&copy; 2026 Care for Life Home Services, LLC. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
+  <!-- Footer Placeholder -->
+  <div id="footer-placeholder"></div>
 
-  <script>
-    // Mobile menu toggle
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-
-    // Navbar scroll effect
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 80) {
-        navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.backdropFilter = 'blur(10px)';
-        navbar.style.boxShadow = '0 1px 3px rgba(0,0,0,0.1)';
-      } else {
-        navbar.style.backgroundColor = 'transparent';
-        navbar.style.backdropFilter = 'none';
-        navbar.style.boxShadow = 'none';
-      }
-    });
-  </script>
+  <!-- Components Script -->
+  <script src="components/components.js"></script>
 </body>
 </html>

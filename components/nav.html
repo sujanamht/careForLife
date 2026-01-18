@@ -1,0 +1,121 @@
+<!-- Navigation -->
+<header
+  id="navbar"
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+>
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <a href="index.html" class="flex items-center space-x-2">
+        <img
+          id="navbar-logo"
+          src="assets/logo.png"
+          alt="Care for Life Logo"
+          class="h-20 w-auto transition-all duration-300"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='block';"
+        />
+        <span class="text-xl font-semibold text-brand-green hidden">Care for Life</span>
+      </a>
+      <div id="nav-links" class="hidden md:flex items-center space-x-6">
+        <a
+          href="index.html"
+          class="nav-link text-brand-blue hover:text-brand-green transition-colors"
+          data-page="index"
+        >Home</a>
+        <a
+          href="about.html"
+          class="nav-link text-brand-blue hover:text-brand-green transition-colors"
+          data-page="about"
+        >About</a>
+        <a
+          href="services.html"
+          class="nav-link text-brand-blue hover:text-brand-green transition-colors"
+          data-page="services"
+        >Services</a>
+        
+        <!-- Dropdown -->
+        <div class="relative" id="dropdown-container">
+          <button
+            id="dropdown-btn"
+            class="nav-link text-brand-blue hover:text-brand-green transition-colors flex items-center gap-1"
+          >
+            More
+            <svg class="w-4 h-4 transition-transform duration-200" id="dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div
+            id="dropdown-menu"
+            class="hidden absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50"
+          >
+            <a
+              href="host-homes.html"
+              class="nav-link block px-4 py-2 text-brand-blue hover:bg-surface hover:text-brand-green transition-colors"
+              data-page="host-homes"
+            >Host Homes</a>
+            <a
+              href="who-we-serve.html"
+              class="nav-link block px-4 py-2 text-brand-blue hover:bg-surface hover:text-brand-green transition-colors"
+              data-page="who-we-serve"
+            >Who We Serve</a>
+            <a
+              href="training-quality.html"
+              class="nav-link block px-4 py-2 text-brand-blue hover:bg-surface hover:text-brand-green transition-colors"
+              data-page="training-quality"
+            >Training & Quality</a>
+            <a
+              href="safety-compliance.html"
+              class="nav-link block px-4 py-2 text-brand-blue hover:bg-surface hover:text-brand-green transition-colors"
+              data-page="safety-compliance"
+            >Safety</a>
+          </div>
+        </div>
+
+        <a
+          href="contact.html"
+          class="nav-link text-brand-blue hover:text-brand-green transition-colors"
+          data-page="contact"
+        >Contact</a>
+        <button
+          id="get-started-btn"
+          class="ml-2 px-5 py-2 bg-brand-blue text-white font-semibold rounded-lg hover:bg-brand-green/90 transition-all shadow-md hover:shadow-lg"
+        >Get Started</button>
+      </div>
+      <button
+        id="mobile-menu-btn"
+        class="md:hidden p-2 rounded-md hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-brand-green"
+        aria-label="Open menu"
+      >
+        <svg
+          class="h-6 w-6 text-brand-blue"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="hidden md:hidden pb-4 bg-white/95 rounded-lg mt-2 p-4"
+    >
+      <div class="flex flex-col space-y-3">
+        <a href="index.html" class="mobile-nav-link text-text hover:text-brand-green px-2 py-1" data-page="index">Home</a>
+        <a href="about.html" class="mobile-nav-link text-text hover:text-brand-green px-2 py-1" data-page="about">About</a>
+        <a href="services.html" class="mobile-nav-link text-text hover:text-brand-green px-2 py-1" data-page="services">Services</a>
+        <a href="host-homes.html" class="mobile-nav-link text-text hover:text-brand-green px-2 py-1" data-page="host-homes">Host Homes</a>
+        <a href="who-we-serve.html" class="mobile-nav-link text-text hover:text-brand-green px-2 py-1" data-page="who-we-serve">Who We Serve</a>
+        <a href="training-quality.html" class="mobile-nav-link text-text hover:text-brand-green px-2 py-1" data-page="training-quality">Training & Quality</a>
+        <a href="safety-compliance.html" class="mobile-nav-link text-text hover:text-brand-green px-2 py-1" data-page="safety-compliance">Safety</a>
+        <a href="contact.html" class="mobile-nav-link text-text hover:text-brand-green px-2 py-1" data-page="contact">Contact</a>
+        <button id="mobile-get-started-btn" class="mt-2 px-5 py-2 bg-brand-green text-white font-semibold rounded-full text-center hover:bg-brand-green/90 transition-all shadow-md">Get Started</button>
+      </div>
+    </div>
+  </nav>
+</header>
