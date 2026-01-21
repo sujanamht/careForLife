@@ -14,7 +14,20 @@
     // Desktop nav links
     document.querySelectorAll(".nav-link").forEach((link) => {
       if (link.dataset.page === currentPage) {
-        link.classList.add("font-semibold", "text-brand-blueDark", "underline", "underline-offset-4", "decoration-2", "active-link");
+        link.classList.add(
+          "active-link",
+          "!text-brand-orange",
+          "font-extrabold",
+          "underline",
+          "decoration-4",
+          "decoration-solid",
+          "underline-offset-[10px]",
+          "decoration-brand-orange",
+          "text-2xl",
+          "drop-shadow-md"
+        );
+        
+       
       }
     });
 
