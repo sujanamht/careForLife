@@ -168,6 +168,31 @@
     }
   }
 
+  // Hide floating button when footer is visible
+  function initFloatingButtonVisibility() {
+    const floatingBtn = document.getElementById("floating-get-started");
+    const footer = document.querySelector("footer");
+
+    if (floatingBtn && footer) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              // Footer is visible, hide the button
+              floatingBtn.classList.add("opacity-0", "pointer-events-none");
+            } else {
+              // Footer is not visible, show the button
+              floatingBtn.classList.remove("opacity-0", "pointer-events-none");
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      observer.observe(footer);
+    }
+  }
+
   // Initialize navbar scroll effect
   function initNavbarScroll() {
     const navbar = document.getElementById("navbar");
@@ -284,6 +309,7 @@
     initDropdown();
     initSlideInPanel();
     initNavbarScroll();
+    initFloatingButtonVisibility();
   }
 
   // Run on DOM ready

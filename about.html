@@ -38,7 +38,7 @@
     }
   </script>
 </head>
-<body class="bg-surface text-text font-sans">
+<body class="bg-surface text-text font-sans min-h-screen overflow-y-auto">
   <!-- Navigation Placeholder -->
   <div id="nav-placeholder"></div>
 
@@ -70,7 +70,7 @@
 
     <!-- Overview Section -->
     <section class="py-12 sm:py-16">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-[90%] mx-auto px-4 sm:px-6 lg:px-8">
         <div class="">
           <p class="text-brand-blue font-medium mb-2">About Us</p>
           <h1 class="font-title text-[46px] sm:text-5xl lg:text-6xl font-semibold text-brand-blueDark mb-8">
@@ -80,9 +80,9 @@
           
         
 
-          <p class="text-text my-4">
+          <p class="text-text my-4 text-justify">
             Care for Life Home Services, LLC is a New Hampshire-based human services organization established to provide high-quality, person-centered supports to adults with developmental disabilities through home- and community-based service models.</p>
-          <p class="text-text my-4">
+          <p class="text-text my-4 text-justify">
             The organization's primary and current service focus is the delivery of Enhanced Family Care (EFC) / Host Home services under New Hampshire's Developmental Disabilities (DD) Waiver. Care for Life Home Services, LLC is committed to supporting individuals in safe, stable, family-based living environments that promote independence, dignity, and community inclusion.</p>
         </div>
       </div>
@@ -90,7 +90,7 @@
 
     <!-- Mission & Values - Split Layout -->
     <section class="">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-[90%] mx-auto ">
         <div class="flex flex-col lg:flex-row lg:gap-16">
           
           <!-- Left: Fixed Mission Panel -->
@@ -146,7 +146,7 @@
             <!-- Connecting line -->
             <div class="hidden lg:block absolute left-0 top-32 bottom-32 w-px bg-gradient-to-b from-transparent via-gray-200 to-transparent"></div>
             
-            <div class="space-y-16">
+            <div class="space-y-16 max-w-[90%]">
               
               <!-- Value 1: Person-Centered Care -->
               <div class="group relative">
@@ -268,8 +268,8 @@
     </section>
 
     <!-- Commitment Section -->
-    <section class="py-12 sm:py-16">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="py-12 sm:py-16 ">
+      <div class="max-w-[90%] mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Section Header -->
         <div class="mb-10">
           <p class="text-brand-blue font-medium ">Our Commitment</p>
@@ -282,7 +282,7 @@
         <!-- Commitment Grid - First Row -->
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-0">
           <!-- NH DHHS -->
-          <div class="py-8 px-6 lg:border-r border-gray-200 group">
+          <div class="py-8  lg:border-r border-gray-200 group">
             <div class="w-14 h-14 bg-cyan-100 rounded-2xl flex items-center justify-center mb-6">
               <svg class="w-7 h-7 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
@@ -390,19 +390,23 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-12 sm:py-16 bg-surface">
-      <div class="bg-gradient-to-r from-brand-blueDark to-brand-green rounded-2xl p-8 sm:p-12 text-center text-white max-w-7xl mx-auto">
-        <h2 class="text-2xl font-bold text-white mb-4">Questions?</h2>
-        <p class="text-white/70 mb-6">We welcome inquiries from families, individuals, and professionals.</p>
-        <a href="contact.html" class="inline-block border-2 border-brand-orange text-brand-orange px-8 py-3 rounded-lg font-medium hover:bg-opacity-90 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-blueDark focus:ring-offset-2">
-          Contact Us
+    <section class="py-12 sm:py-16 bg-gradient-to-b from-brand-blue/10 to-white">
+      <div class="  p-8 sm:p-12 text-center  max-w-7xl mx-auto">
+        <h2 class="text-2xl font-bold text-brand-blueDark mb-4">Write a Reviews</h2>
+        <p class="text-text/70 mb-6">Say what your families and individuals have to say about their experience with Care for Life Home Services.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-5">
+           <a href="contact.html" class="inline-block border-2 border-brand-orange text-brand-orange px-8 py-3 rounded-lg font-medium hover:bg-opacity-90 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-blueDark focus:ring-offset-2">
+          Review Us
         </a>
+        <a href="testimonials.html" class="inline-flex items-center justify-center bg-brand-green text-white px-8 py-3 rounded-lg font-medium hover:bg-opacity-90 transition-colors">
+          Testimonials
+        </a></div>
       </div>
     </section>
   </main>
 
   <!-- Footer Placeholder -->
-  <div id="footer-placeholder"></div>
+  <div id="footer-placeholder" class="bg-white"></div>
 
   <!-- Components Script -->
   <script src="components/components.js"></script>

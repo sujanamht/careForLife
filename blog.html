@@ -13,6 +13,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
   <style>
     @import url('https://fonts.cdnfonts.com/css/sofia-pro');
+    
+    /* Custom scrollbar for sidebar */
+    .blog-sidebar::-webkit-scrollbar {
+      width: 4px;
+    }
+    .blog-sidebar::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    .blog-sidebar::-webkit-scrollbar-thumb {
+      background: #0f85b8;
+      border-radius: 4px;
+    }
   </style>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -46,16 +58,16 @@
     <!-- Hero Section -->
     <section 
       class="relative bg-cover bg-center bg-no-repeat"
-      style="background-image: url('assets/home.png'); height: 45vh;"
+      style="background-image: url('assets/home.png'); height: 40vh;"
     >
       <!-- Overlay -->
       <div class="absolute inset-0 bg-black/60"></div>
       
       <!-- Content positioned at bottom -->
-      <div class="absolute bottom-20 left-0 right-0 pb-4">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="absolute bottom-16 left-0 right-0 pb-4">
+        <div class="max-w-[90%] mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center">
-            <p class="text-brand-orange font-medium mb-3">Our Blog</p>
+          
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white">
               <span class="italic font-serif">Insights</span> & Stories
             </h1>
@@ -65,316 +77,440 @@
 
       <!-- Curved Bottom Edge -->
       <div class="absolute bottom-0 left-0 right-0 leading-none">
-        <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" class="w-full h-20 sm:h-24 md:h-28 block" preserveAspectRatio="none">
-          <path d="M0,40 Q360,120 720,90 Q1080,60 1440,40 L1440,120 L0,120 Z" fill="white"/>
+        <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" class="w-full h-16 sm:h-20 md:h-24 block" preserveAspectRatio="none">
+          <path d="M0,40 Q360,120 720,90 Q1080,60 1440,40 L1440,120 L0,120 Z" fill="#F7F9FC"/>
         </svg>
       </div>
     </section>
 
-    <!-- Featured Article -->
-    <section class="py-16 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-          <!-- Image -->
-          <div class="overflow-hidden rounded-2xl shadow-xl">
-            <img 
-              src="assets/home.png" 
-              alt="Featured Article" 
-              class="w-full h-80 lg:h-96 object-cover hover:scale-105 transition-transform duration-700"
-            />
-          </div>
+    <!-- Blog Content with Sidebar -->
+    <section class="bg-surface min-h-screen">
+      <div class="max-w-[90%] mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
           
-          <!-- Content -->
-          <div>
-            <div class="inline-flex items-center gap-2 bg-brand-orange/10 text-brand-orange px-4 py-1.5 rounded-full text-sm font-medium mb-4">
-              <span class="w-2 h-2 bg-brand-orange rounded-full"></span>
-              Featured
-            </div>
-            <div class="flex items-center gap-2 text-sm text-brand-blue mb-4">
-              <a href="services.html" class="hover:underline">How We Help</a>
-              <span class="text-text/40">•</span>
-              <a href="host-homes.html" class="hover:underline">Host Homes</a>
-            </div>
-            <h2 class="text-3xl sm:text-4xl font-bold text-brand-blueDark mb-4">
-              What Makes a Great Host Home Caregiver?
-            </h2>
-            <p class="text-text/70 text-lg mb-6 leading-relaxed">
-              Becoming a host home caregiver is more than just providing a place to live—it's about opening your heart and home to someone who needs support, care, and a sense of belonging. Discover the qualities that make exceptional caregivers...
-            </p>
-            <div class="flex items-center gap-4 mb-6">
-              <div class="w-10 h-10 bg-brand-blue rounded-full flex items-center justify-center text-white font-bold text-sm">CL</div>
-              <div>
-                <p class="font-medium text-brand-blueDark">Care for Life Team</p>
-                <p class="text-text/50 text-sm">January 15, 2026</p>
+          <!-- Sidebar - Blog List -->
+          <aside class="lg:w-72 flex-shrink-0">
+            <div class="bg-white rounded-2xl shadow-sm p-4 lg:sticky lg:top-24">
+              <h2 class="text-lg font-bold text-brand-blueDark mb-4 px-2">All Articles</h2>
+              
+              <!-- Search -->
+              <div class="relative mb-4">
+                <input 
+                  type="text" 
+                  id="blog-search"
+                  placeholder="Search articles..." 
+                  class="w-full px-4 py-2 pl-10 bg-surface border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                />
+                <svg class="w-4 h-4 text-text/40 absolute left-3 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                </svg>
               </div>
+
+              <!-- Blog List -->
+              <nav class="blog-sidebar space-y-1 max-h-[60vh] overflow-y-auto">
+                
+                <!-- Blog Item 1 -->
+                <button 
+                  onclick="showBlog(0)" 
+                  class="blog-item w-full text-left p-3 rounded-xl hover:bg-surface transition-colors group"
+                  data-index="0"
+                >
+                  <div class="flex items-start gap-3">
+                    <img src="assets/home.png" alt="" class="w-12 h-12 rounded-lg object-cover flex-shrink-0"/>
+                    <div class="min-w-0">
+                      <p class="text-xs text-brand-blue mb-1">Host Homes</p>
+                      <h3 class="text-sm font-medium text-brand-blueDark line-clamp-2 group-hover:text-brand-green transition-colors">
+                        What Makes a Great Host Home Caregiver?
+                      </h3>
+                      <p class="text-xs text-text/50 mt-1">Jan 15, 2026</p>
+                    </div>
+                  </div>
+                </button>
+
+                <!-- Blog Item 2 -->
+                <button 
+                  onclick="showBlog(1)" 
+                  class="blog-item w-full text-left p-3 rounded-xl hover:bg-surface transition-colors group"
+                  data-index="1"
+                >
+                  <div class="flex items-start gap-3">
+                    <img src="assets/home.png" alt="" class="w-12 h-12 rounded-lg object-cover flex-shrink-0"/>
+                    <div class="min-w-0">
+                      <p class="text-xs text-brand-blue mb-1">Host Homes</p>
+                      <h3 class="text-sm font-medium text-brand-blueDark line-clamp-2 group-hover:text-brand-green transition-colors">
+                        Opening Your Home, Changing a Life
+                      </h3>
+                      <p class="text-xs text-text/50 mt-1">Jan 12, 2026</p>
+                    </div>
+                  </div>
+                </button>
+
+                <!-- Blog Item 3 -->
+                <button 
+                  onclick="showBlog(2)" 
+                  class="blog-item w-full text-left p-3 rounded-xl hover:bg-surface transition-colors group"
+                  data-index="2"
+                >
+                  <div class="flex items-start gap-3">
+                    <img src="assets/service.png" alt="" class="w-12 h-12 rounded-lg object-cover flex-shrink-0"/>
+                    <div class="min-w-0">
+                      <p class="text-xs text-brand-blue mb-1">Services</p>
+                      <h3 class="text-sm font-medium text-brand-blueDark line-clamp-2 group-hover:text-brand-green transition-colors">
+                        Person-Centered Support: What It Really Means
+                      </h3>
+                      <p class="text-xs text-text/50 mt-1">Jan 8, 2026</p>
+                    </div>
+                  </div>
+                </button>
+
+                <!-- Blog Item 4 -->
+                <button 
+                  onclick="showBlog(3)" 
+                  class="blog-item w-full text-left p-3 rounded-xl hover:bg-surface transition-colors group"
+                  data-index="3"
+                >
+                  <div class="flex items-start gap-3">
+                    <img src="assets/about.jpg" alt="" class="w-12 h-12 rounded-lg object-cover flex-shrink-0"/>
+                    <div class="min-w-0">
+                      <p class="text-xs text-brand-blue mb-1">Training</p>
+                      <h3 class="text-sm font-medium text-brand-blueDark line-clamp-2 group-hover:text-brand-green transition-colors">
+                        Committed to Excellence in Caregiver Training
+                      </h3>
+                      <p class="text-xs text-text/50 mt-1">Jan 5, 2026</p>
+                    </div>
+                  </div>
+                </button>
+
+                <!-- Blog Item 5 -->
+                <button 
+                  onclick="showBlog(4)" 
+                  class="blog-item w-full text-left p-3 rounded-xl hover:bg-surface transition-colors group"
+                  data-index="4"
+                >
+                  <div class="flex items-start gap-3">
+                    <img src="assets/values/community.jpg" alt="" class="w-12 h-12 rounded-lg object-cover flex-shrink-0"/>
+                    <div class="min-w-0">
+                      <p class="text-xs text-brand-blue mb-1">Community</p>
+                      <h3 class="text-sm font-medium text-brand-blueDark line-clamp-2 group-hover:text-brand-green transition-colors">
+                        Building Bridges: Community Inclusion in Action
+                      </h3>
+                      <p class="text-xs text-text/50 mt-1">Dec 28, 2025</p>
+                    </div>
+                  </div>
+                </button>
+
+                <!-- Blog Item 6 -->
+                <button 
+                  onclick="showBlog(5)" 
+                  class="blog-item w-full text-left p-3 rounded-xl hover:bg-surface transition-colors group"
+                  data-index="5"
+                >
+                  <div class="flex items-start gap-3">
+                    <img src="assets/values/partnership.jpg" alt="" class="w-12 h-12 rounded-lg object-cover flex-shrink-0"/>
+                    <div class="min-w-0">
+                      <p class="text-xs text-brand-blue mb-1">Caregiving</p>
+                      <h3 class="text-sm font-medium text-brand-blueDark line-clamp-2 group-hover:text-brand-green transition-colors">
+                        The Heart of Caregiving: Family Partnerships
+                      </h3>
+                      <p class="text-xs text-text/50 mt-1">Dec 20, 2025</p>
+                    </div>
+                  </div>
+                </button>
+
+                <!-- Blog Item 7 -->
+                <button 
+                  onclick="showBlog(6)" 
+                  class="blog-item w-full text-left p-3 rounded-xl hover:bg-surface transition-colors group"
+                  data-index="6"
+                >
+                  <div class="flex items-start gap-3">
+                    <img src="assets/values/compliance.png" alt="" class="w-12 h-12 rounded-lg object-cover flex-shrink-0"/>
+                    <div class="min-w-0">
+                      <p class="text-xs text-brand-blue mb-1">Safety</p>
+                      <h3 class="text-sm font-medium text-brand-blueDark line-clamp-2 group-hover:text-brand-green transition-colors">
+                        Safety First: Our Commitment to Compliance
+                      </h3>
+                      <p class="text-xs text-text/50 mt-1">Dec 15, 2025</p>
+                    </div>
+                  </div>
+                </button>
+
+              </nav>
             </div>
-            <a href="host-homes.html" class="inline-flex items-center bg-brand-blue text-white px-6 py-3 rounded-full font-medium hover:bg-brand-blueDark transition-colors group">
-              Read Full Article
-              <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+          </aside>
 
-    <!-- All Articles -->
-    <section class="py-16 bg-surface">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Section Header -->
-        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-12">
-          <div>
-            <p class="text-brand-blue font-medium mb-2">Latest Articles</p>
-            <h2 class="text-3xl sm:text-4xl font-bold text-brand-blueDark">
-              <span class="italic font-serif">Explore</span> Our Stories
-            </h2>
-          </div>
-          
-          <!-- Category Filter -->
-          <div class="flex flex-wrap gap-2">
-            <button class="px-4 py-2 bg-brand-blue text-white rounded-full text-sm font-medium">All</button>
-            <button class="px-4 py-2 bg-white text-text/70 rounded-full text-sm font-medium hover:bg-brand-blue hover:text-white transition-colors">Caregiving</button>
-            <button class="px-4 py-2 bg-white text-text/70 rounded-full text-sm font-medium hover:bg-brand-blue hover:text-white transition-colors">Host Homes</button>
-            <button class="px-4 py-2 bg-white text-text/70 rounded-full text-sm font-medium hover:bg-brand-blue hover:text-white transition-colors">Community</button>
-          </div>
-        </div>
-
-        <!-- Articles Grid -->
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          
-          <!-- Article 1 -->
-          <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 group">
-            <div class="overflow-hidden">
+          <!-- Main Content - Selected Blog -->
+          <article class="flex-1 bg-white rounded-2xl shadow-sm overflow-hidden" id="blog-content">
+            
+            <!-- Blog Header Image -->
+            <div class="relative h-64 sm:h-80 lg:h-96 overflow-hidden" id="blog-image-container">
               <img 
+                id="blog-image"
                 src="assets/home.png" 
-                alt="Host Home Care" 
-                class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500"
+                alt="Blog featured image" 
+                class="w-full h-full object-cover"
               />
-            </div>
-            <div class="p-6">
-              <div class="flex items-center gap-2 text-sm mb-3">
-                <span class="text-brand-blue">Host Homes</span>
-                <span class="text-text/40">•</span>
-                <span class="text-text/50">Jan 12, 2026</span>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
+                <div class="inline-flex items-center gap-2 bg-brand-orange text-white px-3 py-1 rounded-full text-sm font-medium mb-3" id="blog-category">
+                  Host Homes
+                </div>
+                <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white" id="blog-title">
+                  What Makes a Great Host Home Caregiver?
+                </h1>
               </div>
-              <h3 class="text-xl font-bold text-brand-blueDark mb-3 group-hover:text-brand-green transition-colors">
-                Opening Your Home, Changing a Life
-              </h3>
-              <p class="text-text/70 mb-4 line-clamp-3">
-                Our host home model provides individuals with developmental disabilities a loving family environment where they can thrive and grow within the community...
-              </p>
-              <a href="host-homes.html" class="inline-flex items-center text-brand-blue font-medium hover:text-brand-green transition-colors group/link">
-                Read More
-                <svg class="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                </svg>
-              </a>
             </div>
-          </article>
 
-          <!-- Article 2 -->
-          <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 group">
-            <div class="overflow-hidden">
-              <img 
-                src="assets/service.png" 
-                alt="Our Services" 
-                class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div class="p-6">
-              <div class="flex items-center gap-2 text-sm mb-3">
-                <span class="text-brand-blue">Services</span>
-                <span class="text-text/40">•</span>
-                <span class="text-text/50">Jan 8, 2026</span>
+            <!-- Blog Meta -->
+            <div class="px-6 sm:px-8 py-4 border-b border-gray-100 flex flex-wrap items-center gap-4 text-sm">
+              <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-brand-blue rounded-full flex items-center justify-center text-white font-bold text-xs">CL</div>
+                <span class="text-text/70" id="blog-author">Care for Life Team</span>
               </div>
-              <h3 class="text-xl font-bold text-brand-blueDark mb-3 group-hover:text-brand-green transition-colors">
-                Person-Centered Support: What It Really Means
-              </h3>
-              <p class="text-text/70 mb-4 line-clamp-3">
-                Person-centered care isn't just a buzzword—it's the foundation of everything we do. Learn how we tailor our services to each individual's unique needs...
-              </p>
-              <a href="services.html" class="inline-flex items-center text-brand-blue font-medium hover:text-brand-green transition-colors group/link">
-                Read More
-                <svg class="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                </svg>
-              </a>
+              <span class="text-text/30">•</span>
+              <span class="text-text/50" id="blog-date">January 15, 2026</span>
+              <span class="text-text/30">•</span>
+              <span class="text-text/50" id="blog-read-time">5 min read</span>
             </div>
-          </article>
 
-          <!-- Article 3 -->
-          <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 group">
-            <div class="overflow-hidden">
-              <img 
-                src="assets/about.jpg" 
-                alt="Training Excellence" 
-                class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div class="p-6">
-              <div class="flex items-center gap-2 text-sm mb-3">
-                <span class="text-brand-blue">Training</span>
-                <span class="text-text/40">•</span>
-                <span class="text-text/50">Jan 5, 2026</span>
+            <!-- Blog Body -->
+            <div class="px-6 sm:px-8 py-8" id="blog-body">
+              <div class="prose prose-lg max-w-none">
+                <p class="text-lg text-text/80 leading-relaxed mb-6">
+                  Becoming a host home caregiver is more than just providing a place to live—it's about opening your heart and home to someone who needs support, care, and a sense of belonging. At Care for Life Home Services, we've had the privilege of working with exceptional caregivers who go above and beyond every day.
+                </p>
+
+                <h2 class="text-2xl font-bold text-brand-blueDark mt-8 mb-4">The Qualities That Matter Most</h2>
+                
+                <p class="text-text/70 leading-relaxed mb-4">
+                  Through our years of experience, we've identified several key qualities that distinguish truly great host home caregivers:
+                </p>
+
+                <ul class="space-y-3 mb-6">
+                  <li class="flex items-start gap-3">
+                    <svg class="w-5 h-5 text-brand-green mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="text-text/70"><strong class="text-brand-blueDark">Compassion and Patience:</strong> Understanding that everyone has their own pace and needs.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <svg class="w-5 h-5 text-brand-green mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="text-text/70"><strong class="text-brand-blueDark">Commitment to Growth:</strong> Helping individuals develop new skills and reach their potential.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <svg class="w-5 h-5 text-brand-green mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="text-text/70"><strong class="text-brand-blueDark">Flexibility:</strong> Adapting to changing needs and circumstances with grace.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <svg class="w-5 h-5 text-brand-green mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="text-text/70"><strong class="text-brand-blueDark">Strong Communication:</strong> Working effectively with families, teams, and the individuals in care.</span>
+                  </li>
+                </ul>
+
+                <h2 class="text-2xl font-bold text-brand-blueDark mt-8 mb-4">Making a Real Difference</h2>
+                
+                <p class="text-text/70 leading-relaxed mb-4">
+                  Host home caregivers don't just provide care—they create homes. They celebrate birthdays, share meals, and build lasting relationships that transform lives. The impact of this work extends far beyond daily tasks; it's about creating a sense of belonging and community.
+                </p>
+
+                <blockquote class="border-l-4 border-brand-orange pl-6 my-8 italic text-text/60">
+                  "Being a host home caregiver has been the most rewarding experience of my life. Watching someone grow, learn, and thrive in our home is indescribable."
+                  <footer class="mt-2 text-sm not-italic text-brand-blueDark font-medium">— A Care for Life Host Home Caregiver</footer>
+                </blockquote>
+
+                <h2 class="text-2xl font-bold text-brand-blueDark mt-8 mb-4">Join Our Team</h2>
+                
+                <p class="text-text/70 leading-relaxed mb-6">
+                  If you're considering becoming a host home caregiver, we'd love to hear from you. We provide comprehensive training, ongoing support, and competitive compensation. Most importantly, you'll be joining a community dedicated to making a difference.
+                </p>
+
+                <!-- CTA -->
+                <div class="bg-surface rounded-xl p-6 mt-8">
+                  <h3 class="text-xl font-bold text-brand-blueDark mb-2">Interested in Becoming a Caregiver?</h3>
+                  <p class="text-text/70 mb-4">Learn more about our host home program and how you can make a difference.</p>
+                  <a href="host-homes.html" class="inline-flex items-center bg-brand-blue text-white px-6 py-3 rounded-full font-medium hover:bg-brand-blueDark transition-colors">
+                    Learn More
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                  </a>
+                </div>
               </div>
-              <h3 class="text-xl font-bold text-brand-blueDark mb-3 group-hover:text-brand-green transition-colors">
-                Committed to Excellence in Caregiver Training
-              </h3>
-              <p class="text-text/70 mb-4 line-clamp-3">
-                Our caregivers receive comprehensive training that goes beyond the basics. Discover how we prepare our team to provide exceptional support...
-              </p>
-              <a href="training-quality.html" class="inline-flex items-center text-brand-blue font-medium hover:text-brand-green transition-colors group/link">
-                Read More
-                <svg class="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                </svg>
-              </a>
             </div>
+
           </article>
-
-          <!-- Article 4 -->
-          <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 group">
-            <div class="overflow-hidden">
-              <img 
-                src="assets/values/community.jpg" 
-                alt="Community Inclusion" 
-                class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div class="p-6">
-              <div class="flex items-center gap-2 text-sm mb-3">
-                <span class="text-brand-blue">Community</span>
-                <span class="text-text/40">•</span>
-                <span class="text-text/50">Dec 28, 2025</span>
-              </div>
-              <h3 class="text-xl font-bold text-brand-blueDark mb-3 group-hover:text-brand-green transition-colors">
-                Building Bridges: Community Inclusion in Action
-              </h3>
-              <p class="text-text/70 mb-4 line-clamp-3">
-                True inclusion means more than just being present—it means being welcomed, valued, and included. See how we help individuals connect with their communities...
-              </p>
-              <a href="who-we-serve.html" class="inline-flex items-center text-brand-blue font-medium hover:text-brand-green transition-colors group/link">
-                Read More
-                <svg class="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                </svg>
-              </a>
-            </div>
-          </article>
-
-          <!-- Article 5 -->
-          <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 group">
-            <div class="overflow-hidden">
-              <img 
-                src="assets/values/partnership.jpg" 
-                alt="Family Partnership" 
-                class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div class="p-6">
-              <div class="flex items-center gap-2 text-sm mb-3">
-                <span class="text-brand-blue">Caregiving</span>
-                <span class="text-text/40">•</span>
-                <span class="text-text/50">Dec 20, 2025</span>
-              </div>
-              <h3 class="text-xl font-bold text-brand-blueDark mb-3 group-hover:text-brand-green transition-colors">
-                The Heart of Caregiving: Family Partnerships
-              </h3>
-              <p class="text-text/70 mb-4 line-clamp-3">
-                Collaboration with families is at the core of what we do. Learn how we work together with families and guardians to provide the best possible care...
-              </p>
-              <a href="about.html" class="inline-flex items-center text-brand-blue font-medium hover:text-brand-green transition-colors group/link">
-                Read More
-                <svg class="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                </svg>
-              </a>
-            </div>
-          </article>
-
-          <!-- Article 6 -->
-          <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 group">
-            <div class="overflow-hidden">
-              <img 
-                src="assets/values/compliance.png" 
-                alt="Safety & Compliance" 
-                class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div class="p-6">
-              <div class="flex items-center gap-2 text-sm mb-3">
-                <span class="text-brand-blue">Safety</span>
-                <span class="text-text/40">•</span>
-                <span class="text-text/50">Dec 15, 2025</span>
-              </div>
-              <h3 class="text-xl font-bold text-brand-blueDark mb-3 group-hover:text-brand-green transition-colors">
-                Safety First: Our Commitment to Compliance
-              </h3>
-              <p class="text-text/70 mb-4 line-clamp-3">
-                Safety isn't just a priority—it's a promise. Explore our rigorous safety protocols and compliance standards that protect everyone in our care...
-              </p>
-              <a href="safety-compliance.html" class="inline-flex items-center text-brand-blue font-medium hover:text-brand-green transition-colors group/link">
-                Read More
-                <svg class="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                </svg>
-              </a>
-            </div>
-          </article>
-
-        </div>
-
-        <!-- Load More Button -->
-        <div class="text-center mt-12">
-          <button class="inline-flex items-center px-8 py-3 border-2 border-brand-blue text-brand-blue rounded-full font-medium hover:bg-brand-blue hover:text-white transition-colors">
-            Load More Articles
-            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Newsletter CTA -->
-    <section class="py-16 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-gradient-to-r from-brand-blueDark to-brand-green rounded-3xl p-8 sm:p-12 relative overflow-hidden">
-          <!-- Decorative elements -->
-          <div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/4"></div>
-          <div class="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/4"></div>
-          
-          <div class="relative z-10 max-w-2xl mx-auto text-center">
-            <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">
-              Stay Connected
-            </h2>
-            <p class="text-white/80 mb-8">
-              Get the latest updates, articles, and insights from Care for Life delivered to your inbox.
-            </p>
-            <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input 
-                type="email" 
-                placeholder="Enter your email" 
-                class="flex-1 px-5 py-3 rounded-full text-text focus:outline-none focus:ring-2 focus:ring-brand-orange"
-              />
-              <button 
-                type="submit" 
-                class="px-8 py-3 bg-brand-orange text-white rounded-full font-medium hover:bg-opacity-90 transition-colors"
-              >
-                Subscribe
-              </button>
-            </form>
-          </div>
         </div>
       </div>
     </section>
   </main>
 
   <!-- Footer Placeholder -->
-  <div id="footer-placeholder"></div>
+  <div id="footer-placeholder" class="bg-surface"></div>
 
   <!-- Components Script -->
   <script src="components/components.js"></script>
+
+  <!-- Blog Selection Script -->
+  <script>
+    // Blog data
+    const blogs = [
+      {
+        title: "What Makes a Great Host Home Caregiver?",
+        category: "Host Homes",
+        image: "assets/home.png",
+        date: "January 15, 2026",
+        readTime: "5 min read",
+        content: `
+          <p class="text-lg text-text/80 leading-relaxed mb-6">
+            Becoming a host home caregiver is more than just providing a place to live—it's about opening your heart and home to someone who needs support, care, and a sense of belonging. At Care for Life Home Services, we've had the privilege of working with exceptional caregivers who go above and beyond every day.
+          </p>
+          <h2 class="text-2xl font-bold text-brand-blueDark mt-8 mb-4">The Qualities That Matter Most</h2>
+          <p class="text-text/70 leading-relaxed mb-4">Through our years of experience, we've identified several key qualities that distinguish truly great host home caregivers:</p>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-start gap-3"><svg class="w-5 h-5 text-brand-green mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span class="text-text/70"><strong class="text-brand-blueDark">Compassion and Patience:</strong> Understanding that everyone has their own pace and needs.</span></li>
+            <li class="flex items-start gap-3"><svg class="w-5 h-5 text-brand-green mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span class="text-text/70"><strong class="text-brand-blueDark">Commitment to Growth:</strong> Helping individuals develop new skills and reach their potential.</span></li>
+            <li class="flex items-start gap-3"><svg class="w-5 h-5 text-brand-green mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span class="text-text/70"><strong class="text-brand-blueDark">Flexibility:</strong> Adapting to changing needs and circumstances with grace.</span></li>
+          </ul>
+          <blockquote class="border-l-4 border-brand-orange pl-6 my-8 italic text-text/60">"Being a host home caregiver has been the most rewarding experience of my life."<footer class="mt-2 text-sm not-italic text-brand-blueDark font-medium">— A Care for Life Host Home Caregiver</footer></blockquote>
+        `
+      },
+      {
+        title: "Opening Your Home, Changing a Life",
+        category: "Host Homes",
+        image: "assets/home.png",
+        date: "January 12, 2026",
+        readTime: "4 min read",
+        content: `
+          <p class="text-lg text-text/80 leading-relaxed mb-6">Our host home model provides individuals with developmental disabilities a loving family environment where they can thrive and grow within the community. When you open your home, you're not just providing shelter—you're offering belonging.</p>
+          <h2 class="text-2xl font-bold text-brand-blueDark mt-8 mb-4">The Host Home Experience</h2>
+          <p class="text-text/70 leading-relaxed mb-4">Host families become an extended family for the individuals in their care. They share meals, celebrate holidays, and create lasting memories together. This family-centered approach leads to better outcomes and happier lives.</p>
+          <h2 class="text-2xl font-bold text-brand-blueDark mt-8 mb-4">Support Every Step of the Way</h2>
+          <p class="text-text/70 leading-relaxed mb-4">Care for Life provides comprehensive training, 24/7 support, and ongoing resources to ensure both caregivers and individuals thrive. You're never alone on this journey.</p>
+        `
+      },
+      {
+        title: "Person-Centered Support: What It Really Means",
+        category: "Services",
+        image: "assets/service.png",
+        date: "January 8, 2026",
+        readTime: "6 min read",
+        content: `
+          <p class="text-lg text-text/80 leading-relaxed mb-6">Person-centered care isn't just a buzzword—it's the foundation of everything we do. Learn how we tailor our services to each individual's unique needs, preferences, and goals.</p>
+          <h2 class="text-2xl font-bold text-brand-blueDark mt-8 mb-4">What Does Person-Centered Mean?</h2>
+          <p class="text-text/70 leading-relaxed mb-4">At its core, person-centered support means putting the individual at the center of all decisions about their care. Their voice matters most. Their preferences guide our approach. Their goals become our mission.</p>
+          <h2 class="text-2xl font-bold text-brand-blueDark mt-8 mb-4">How We Implement It</h2>
+          <p class="text-text/70 leading-relaxed mb-4">We start by truly listening. Through comprehensive assessments and ongoing conversations, we develop individualized support plans that reflect each person's unique needs, strengths, and aspirations.</p>
+        `
+      },
+      {
+        title: "Committed to Excellence in Caregiver Training",
+        category: "Training",
+        image: "assets/about.jpg",
+        date: "January 5, 2026",
+        readTime: "5 min read",
+        content: `
+          <p class="text-lg text-text/80 leading-relaxed mb-6">Our caregivers receive comprehensive training that goes beyond the basics. Discover how we prepare our team to provide exceptional support and care.</p>
+          <h2 class="text-2xl font-bold text-brand-blueDark mt-8 mb-4">Our Training Philosophy</h2>
+          <p class="text-text/70 leading-relaxed mb-4">We believe that great care starts with great training. Our program combines theoretical knowledge with hands-on experience, ensuring caregivers are prepared for real-world situations.</p>
+          <h2 class="text-2xl font-bold text-brand-blueDark mt-8 mb-4">Ongoing Development</h2>
+          <p class="text-text/70 leading-relaxed mb-4">Training doesn't stop after orientation. We provide continuous education opportunities, regular skill updates, and specialized training to keep our team at the forefront of best practices.</p>
+        `
+      },
+      {
+        title: "Building Bridges: Community Inclusion in Action",
+        category: "Community",
+        image: "assets/values/community.jpg",
+        date: "December 28, 2025",
+        readTime: "4 min read",
+        content: `
+          <p class="text-lg text-text/80 leading-relaxed mb-6">True inclusion means more than just being present—it means being welcomed, valued, and included. See how we help individuals connect with their communities in meaningful ways.</p>
+          <h2 class="text-2xl font-bold text-brand-blueDark mt-8 mb-4">Beyond Presence to Participation</h2>
+          <p class="text-text/70 leading-relaxed mb-4">Community inclusion is about active participation. We help individuals find activities they love, build friendships, and contribute to their neighborhoods in ways that matter to them.</p>
+          <h2 class="text-2xl font-bold text-brand-blueDark mt-8 mb-4">Real Stories of Connection</h2>
+          <p class="text-text/70 leading-relaxed mb-4">From joining local clubs to volunteering at community events, the individuals we support are making real connections and finding their place in the community.</p>
+        `
+      },
+      {
+        title: "The Heart of Caregiving: Family Partnerships",
+        category: "Caregiving",
+        image: "assets/values/partnership.jpg",
+        date: "December 20, 2025",
+        readTime: "5 min read",
+        content: `
+          <p class="text-lg text-text/80 leading-relaxed mb-6">Collaboration with families is at the core of what we do. Learn how we work together with families and guardians to provide the best possible care.</p>
+          <h2 class="text-2xl font-bold text-brand-blueDark mt-8 mb-4">Partners in Care</h2>
+          <p class="text-text/70 leading-relaxed mb-4">Families know their loved ones best. We value their insights, respect their wishes, and work collaboratively to ensure continuity of care and support.</p>
+          <h2 class="text-2xl font-bold text-brand-blueDark mt-8 mb-4">Communication is Key</h2>
+          <p class="text-text/70 leading-relaxed mb-4">Regular updates, open dialogue, and transparent communication keep families informed and involved. They're not just observers—they're active partners in the care journey.</p>
+        `
+      },
+      {
+        title: "Safety First: Our Commitment to Compliance",
+        category: "Safety",
+        image: "assets/values/compliance.png",
+        date: "December 15, 2025",
+        readTime: "4 min read",
+        content: `
+          <p class="text-lg text-text/80 leading-relaxed mb-6">Safety isn't just a priority—it's a promise. Explore our rigorous safety protocols and compliance standards that protect everyone in our care.</p>
+          <h2 class="text-2xl font-bold text-brand-blueDark mt-8 mb-4">Comprehensive Safety Measures</h2>
+          <p class="text-text/70 leading-relaxed mb-4">From background checks to home safety inspections, we leave nothing to chance. Our multi-layered approach to safety protects individuals, caregivers, and families alike.</p>
+          <h2 class="text-2xl font-bold text-brand-blueDark mt-8 mb-4">Regulatory Excellence</h2>
+          <p class="text-text/70 leading-relaxed mb-4">We don't just meet state and federal requirements—we exceed them. Our commitment to compliance reflects our deeper commitment to the wellbeing of everyone we serve.</p>
+        `
+      }
+    ];
+
+    // Show selected blog
+    function showBlog(index) {
+      const blog = blogs[index];
+      
+      // Update content
+      document.getElementById('blog-image').src = blog.image;
+      document.getElementById('blog-category').textContent = blog.category;
+      document.getElementById('blog-title').textContent = blog.title;
+      document.getElementById('blog-date').textContent = blog.date;
+      document.getElementById('blog-read-time').textContent = blog.readTime;
+      document.getElementById('blog-body').innerHTML = '<div class="prose prose-lg max-w-none">' + blog.content + '</div>';
+      
+      // Update active state in sidebar
+      document.querySelectorAll('.blog-item').forEach((item, i) => {
+        if (i === index) {
+          item.classList.add('bg-brand-blue/10', 'border-l-4', 'border-brand-blue');
+        } else {
+          item.classList.remove('bg-brand-blue/10', 'border-l-4', 'border-brand-blue');
+        }
+      });
+
+      // Scroll to top of content on mobile
+      if (window.innerWidth < 1024) {
+        document.getElementById('blog-content').scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // Initialize first blog as active
+    document.addEventListener('DOMContentLoaded', () => {
+      showBlog(0);
+    });
+
+    // Search functionality
+    document.getElementById('blog-search')?.addEventListener('input', function(e) {
+      const searchTerm = e.target.value.toLowerCase();
+      document.querySelectorAll('.blog-item').forEach((item, index) => {
+        const title = blogs[index].title.toLowerCase();
+        const category = blogs[index].category.toLowerCase();
+        if (title.includes(searchTerm) || category.includes(searchTerm)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  </script>
 </body>
 </html>
