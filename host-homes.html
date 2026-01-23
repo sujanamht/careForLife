@@ -41,38 +41,40 @@
     <!-- Hero Section with Background -->
     <section 
       class="relative bg-cover bg-center bg-no-repeat"
-      style="background-image: url('assets/base.png'); height: 60vh;"
+      style="background-image: url('assets/base.png'); height: 50vh;"
     >
       <!-- Overlay -->
-      <div class="absolute inset-0 bg-white/50"></div>
+      <div class="absolute inset-0 bg-black/50"></div>
       
       <!-- Content positioned at bottom -->
-      <div class="absolute bottom-0 left-0 right-0 pb-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="max-w-2xl text-left">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-blue mb-4">
-              Host Homes
-            </h1>
-            <p class=" text-xl text-brand-blue/90 font-medium">
-              Information for individuals interested in becoming a host home caregiver.
-            </p>
-          </div>
-        </div>
+      <div class="absolute text-center bottom-0 left-0 right-0 pb-20">
+        <h2 class="sm:text-6xl text-5xl font-bold text-white font-title">Care for Life <span class="text-brand-orange">Host Homes</span></h2>
+      </div>
+
+      <!-- Curved Bottom Edge -->
+      <div class="absolute bottom-0 left-0 right-0 leading-none">
+        <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" class="w-full h-20 sm:h-24 md:h-28 block " preserveAspectRatio="none">
+          <path d="M0,40 Q360,120 720,90 Q1080,60 1440,40 L1440,120 L0,120 Z" fill="#F7F9FC"/>
+        </svg>
       </div>
     </section>
 
     <!-- What Are Host Homes -->
     <section class="py-12 sm:py-16">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl">
-          <h2 class="text-2xl font-bold text-brand-blue mb-6">What Are Host Homes?</h2>
-          <p class="text-text mb-4">
+      <div class="max-w-[90%] mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="">
+          <p class="text-brand-blue font-medium mb-2">Host Homes</p>
+          <h1 class="font-title text-[46px] sm:text-5xl lg:text-6xl font-semibold text-brand-blueDark mb-8">
+            Family-Based <span class="text-brand-orange">Care</span>
+          </h1>
+          
+          <p class="text-text my-4 text-justify">
             Host homes are private residences where trained caregivers provide residential supports for adults with developmental disabilities. The caregiver opens their home and provides daily support, supervision, and assistance based on each individual's needs and service plan.
           </p>
-          <p class="text-text mb-4">
+          <p class="text-text my-4 text-justify">
             This arrangement offers a more individualized, family-like living environment compared to traditional residential settings. Host home caregivers become an important part of the support network for the individuals they serve.
           </p>
-          <p class="text-text">
+          <p class="text-text my-4 text-justify">
             Host home caregivers work in partnership with Care for Life Home Services, which provides training, ongoing support, and oversight of the services provided.
           </p>
         </div>
@@ -81,60 +83,86 @@
 
     <!-- Provider Responsibilities -->
     <section class="py-12 sm:py-16 bg-surface">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-2xl font-bold text-brand-blue mb-8">Our Role as Provider Agency</h2>
-        <p class="text-text mb-8 max-w-3xl">Care for Life Home Services supports host home caregivers through:</p>
-        
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
-            <div class="w-10 h-10 bg-brand-green bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-5 h-5 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"/>
-              </svg>
+      <div class="max-w-[90%] mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Header with accent line -->
+        <div class="text-center mb-16">
+          <div class="inline-flex items-center gap-2 mb-2">
+            <span class="text-brand-blueDark font-medium text-sm tracking-wide">Our Role</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-blueDark mb-6">
+            Provider Agency <span class="text-brand-orange">Support</span>
+          </h2>
+          <p class="text-text/70 text-lg max-w-4xl mx-auto leading-relaxed">
+            Care for Life Home Services supports host home caregivers through comprehensive services and ongoing partnership.
+          </p>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="relative group">
+            <div class="absolute -inset-0.5 bg-gradient-to-r from-brand-blue to-brand-green rounded-2xl opacity-20 group-hover:opacity-40 transition duration-300"></div>
+            <div class="relative bg-white p-8 rounded-2xl shadow-sm">
+              <div class="w-14 h-14 bg-gradient-to-br from-brand-blue to-brand-blue/70 rounded-xl flex items-center justify-center shadow-lg shadow-brand-blue/20 mb-6">
+                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-brand-blueDark mb-3">Recruiting</h3>
+              <p class="text-text/70 leading-relaxed">Identifying and connecting with individuals who may be interested in becoming host home caregivers.</p>
             </div>
-            <h3 class="font-semibold text-lg text-brand-blue mb-2">Recruiting</h3>
-            <p class="text-text text-sm">Identifying and connecting with individuals who may be interested in becoming host home caregivers.</p>
           </div>
           
-          <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
-            <div class="w-10 h-10 bg-brand-green bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-5 h-5 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
-              </svg>
+          <div class="relative group">
+            <div class="absolute -inset-0.5 bg-gradient-to-r from-brand-green to-brand-orange rounded-2xl opacity-20 group-hover:opacity-40 transition duration-300"></div>
+            <div class="relative bg-white p-8 rounded-2xl shadow-sm">
+              <div class="w-14 h-14 bg-gradient-to-br from-brand-green to-brand-green/70 rounded-xl flex items-center justify-center shadow-lg shadow-brand-green/20 mb-6">
+                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-brand-blueDark mb-3">Screening</h3>
+              <p class="text-text/70 leading-relaxed">Background checks, reference verification, home assessments, and evaluation of caregiver readiness.</p>
             </div>
-            <h3 class="font-semibold text-lg text-brand-blue mb-2">Screening</h3>
-            <p class="text-text text-sm">Background checks, reference verification, home assessments, and evaluation of caregiver readiness.</p>
           </div>
           
-          <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
-            <div class="w-10 h-10 bg-brand-green bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-5 h-5 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-              </svg>
+          <div class="relative group">
+            <div class="absolute -inset-0.5 bg-gradient-to-r from-brand-orange to-brand-blue rounded-2xl opacity-20 group-hover:opacity-40 transition duration-300"></div>
+            <div class="relative bg-white p-8 rounded-2xl shadow-sm">
+              <div class="w-14 h-14 bg-gradient-to-br from-brand-orange to-brand-orange/70 rounded-xl flex items-center justify-center shadow-lg shadow-brand-orange/20 mb-6">
+                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-brand-blueDark mb-3">Training</h3>
+              <p class="text-text/70 leading-relaxed">Comprehensive initial training and ongoing professional development opportunities.</p>
             </div>
-            <h3 class="font-semibold text-lg text-brand-blue mb-2">Training</h3>
-            <p class="text-text text-sm">Comprehensive initial training and ongoing professional development opportunities.</p>
           </div>
           
-          <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
-            <div class="w-10 h-10 bg-brand-green bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-5 h-5 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
-              </svg>
+          <div class="relative group">
+            <div class="absolute -inset-0.5 bg-gradient-to-r from-brand-blue to-brand-green rounded-2xl opacity-20 group-hover:opacity-40 transition duration-300"></div>
+            <div class="relative bg-white p-8 rounded-2xl shadow-sm">
+              <div class="w-14 h-14 bg-gradient-to-br from-brand-blue to-brand-blue/70 rounded-xl flex items-center justify-center shadow-lg shadow-brand-blue/20 mb-6">
+                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-brand-blueDark mb-3">Monitoring</h3>
+              <p class="text-text/70 leading-relaxed">Regular oversight visits, documentation review, and quality assurance activities.</p>
             </div>
-            <h3 class="font-semibold text-lg text-brand-blue mb-2">Monitoring</h3>
-            <p class="text-text text-sm">Regular oversight visits, documentation review, and quality assurance activities.</p>
           </div>
           
-          <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
-            <div class="w-10 h-10 bg-brand-green bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-5 h-5 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/>
-              </svg>
+          <div class="relative group sm:col-span-2 lg:col-span-1">
+            <div class="absolute -inset-0.5 bg-gradient-to-r from-brand-green to-brand-orange rounded-2xl opacity-20 group-hover:opacity-40 transition duration-300"></div>
+            <div class="relative bg-white p-8 rounded-2xl shadow-sm">
+              <div class="w-14 h-14 bg-gradient-to-br from-brand-green to-brand-green/70 rounded-xl flex items-center justify-center shadow-lg shadow-brand-green/20 mb-6">
+                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-brand-blueDark mb-3">Ongoing Support</h3>
+              <p class="text-text/70 leading-relaxed">Access to agency staff for guidance, problem-solving, and assistance as needed.</p>
             </div>
-            <h3 class="font-semibold text-lg text-brand-blue mb-2">Ongoing Support</h3>
-            <p class="text-text text-sm">Access to agency staff for guidance, problem-solving, and assistance as needed.</p>
           </div>
         </div>
       </div>
@@ -142,39 +170,79 @@
 
     <!-- Express Interest Section -->
     <section class="py-12 sm:py-16">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl mx-auto text-center">
-          <h2 class="text-2xl font-bold text-brand-blue mb-6">Interested in Becoming a Host Home Caregiver?</h2>
-          <p class="text-text mb-8">
-            If you're interested in learning more about becoming a host home caregiver in New Hampshire, we welcome your inquiry. The process begins with an initial conversation to discuss the role, responsibilities, and requirements.
-          </p>
-          <div class="bg-surface p-8 rounded-xl border border-gray-100">
-            <h3 class="font-semibold text-lg text-brand-blue mb-4">General Requirements</h3>
-            <ul class="text-left text-text space-y-2 mb-8">
-              <li class="flex items-start">
-                <span class="w-2 h-2 bg-brand-orange rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span>Appropriate living space in your home</span>
-              </li>
-              <li class="flex items-start">
-                <span class="w-2 h-2 bg-brand-orange rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span>Ability to pass background check requirements</span>
-              </li>
-              <li class="flex items-start">
-                <span class="w-2 h-2 bg-brand-orange rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span>Completion of required training</span>
-              </li>
-              <li class="flex items-start">
-                <span class="w-2 h-2 bg-brand-orange rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span>Commitment to person-centered support practices</span>
-              </li>
-              <li class="flex items-start">
-                <span class="w-2 h-2 bg-brand-orange rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span>Valid driver's license and reliable transportation</span>
-              </li>
-            </ul>
-            <a href="contact.html" class="inline-block bg-brand-green text-white px-8 py-3 rounded-lg font-medium hover:bg-opacity-90 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green focus:ring-offset-2">
-              Express Interest
-            </a>
+      <div class="max-w-[90%] mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <!-- Header -->
+          <div class="text-center mb-12">
+            <p class="text-brand-blue font-medium mb-2">Get Started</p>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-blueDark mb-6">
+              Interested in Becoming a <span class="text-brand-orange">Host Home Caregiver?</span>
+            </h2>
+            <p class="text-text/70 text-lg max-w-2xl mx-auto leading-relaxed">
+              If you're interested in learning more about becoming a host home caregiver in New Hampshire, we welcome your inquiry. The process begins with an initial conversation to discuss the role, responsibilities, and requirements.
+            </p>
+          </div>
+
+          <!-- Requirements Card -->
+          <div class="relative group">
+            <div class="absolute -inset-0.5 bg-gradient-to-r from-brand-green to-brand-orange rounded-2xl opacity-20 group-hover:opacity-40 transition duration-300"></div>
+            <div class="relative bg-white p-8 sm:p-10 rounded-2xl shadow-sm">
+              <div class="flex items-center gap-4 mb-8">
+                <div class="w-14 h-14 bg-gradient-to-br from-brand-green to-brand-green/70 rounded-xl flex items-center justify-center shadow-lg shadow-brand-green/20">
+                  <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-brand-blueDark">General Requirements</h3>
+              </div>
+              <ul class="space-y-4 mb-8">
+                <li class="flex items-start gap-4 p-4 bg-surface/50 rounded-xl hover:bg-surface transition-colors">
+                  <div class="w-8 h-8 bg-brand-orange/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg class="w-4 h-4 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                  </div>
+                  <span class="text-text font-medium">Appropriate living space in your home</span>
+                </li>
+                <li class="flex items-start gap-4 p-4 bg-surface/50 rounded-xl hover:bg-surface transition-colors">
+                  <div class="w-8 h-8 bg-brand-orange/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg class="w-4 h-4 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                  </div>
+                  <span class="text-text font-medium">Ability to pass background check requirements</span>
+                </li>
+                <li class="flex items-start gap-4 p-4 bg-surface/50 rounded-xl hover:bg-surface transition-colors">
+                  <div class="w-8 h-8 bg-brand-orange/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg class="w-4 h-4 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                  </div>
+                  <span class="text-text font-medium">Completion of required training</span>
+                </li>
+                <li class="flex items-start gap-4 p-4 bg-surface/50 rounded-xl hover:bg-surface transition-colors">
+                  <div class="w-8 h-8 bg-brand-orange/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg class="w-4 h-4 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                  </div>
+                  <span class="text-text font-medium">Commitment to person-centered support practices</span>
+                </li>
+                <li class="flex items-start gap-4 p-4 bg-surface/50 rounded-xl hover:bg-surface transition-colors">
+                  <div class="w-8 h-8 bg-brand-orange/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg class="w-4 h-4 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                  </div>
+                  <span class="text-text font-medium">Valid driver's license and reliable transportation</span>
+                </li>
+              </ul>
+              <div class="text-center">
+                <a href="contact.html" class="inline-block bg-brand-green text-white px-8 py-3 rounded-lg font-medium hover:bg-brand-green/90 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green focus:ring-offset-2 shadow-md">
+                  Express Interest
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

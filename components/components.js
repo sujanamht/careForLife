@@ -1,3 +1,31 @@
+// Global mobile menu toggle function (available immediately)
+window.toggleMobileMenu = function() {
+  const mobileMenu = document.getElementById("mobile-menu");
+  const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+  const hamburgerIcon = document.getElementById("hamburger-icon");
+  
+  if (!mobileMenu || !mobileMenuBtn) return;
+  
+  const isCurrentlyHidden = mobileMenu.classList.contains("hidden");
+  mobileMenu.classList.toggle("hidden");
+  mobileMenuBtn.setAttribute("aria-expanded", isCurrentlyHidden ? "true" : "false");
+  
+  if (hamburgerIcon) {
+    if (isCurrentlyHidden) {
+      hamburgerIcon.innerHTML = `
+        <path d="M6 6l12 12" />
+        <path d="M6 18L18 6" />
+      `;
+    } else {
+      hamburgerIcon.innerHTML = `
+        <path d="M4 7h16" />
+        <path d="M4 12h16" />
+        <path d="M4 17h16" />
+      `;
+    }
+  }
+};
+
 // Components loader for Care for Life website
 (function () {
   // Get current page name from URL
@@ -40,16 +68,47 @@
     });
   }
 
-  // Initialize mobile menu toggle
+  // Initialize mobile menu toggle (for closing on link clicks and outside clicks)
+  let mobileMenuClickHandler = null;
   function initMobileMenu() {
-    const mobileMenuBtn = document.getElementById("mobile-menu-btn");
-    const mobileMenu = document.getElementById("mobile-menu");
-
-    if (mobileMenuBtn && mobileMenu) {
-      mobileMenuBtn.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
+    // Remove existing handler if any
+    if (mobileMenuClickHandler) {
+      document.removeEventListener("click", mobileMenuClickHandler);
     }
+    
+    function setupMobileMenu() {
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      
+      if (!mobileMenu || !mobileMenuBtn) {
+        setTimeout(setupMobileMenu, 100);
+        return;
+      }
+      
+      // Close menu when clicking on a mobile nav link
+      document.querySelectorAll(".mobile-nav-link").forEach(link => {
+        link.addEventListener("click", () => {
+          if (!mobileMenu.classList.contains("hidden")) {
+            window.toggleMobileMenu();
+          }
+        });
+      });
+      
+      // Close menu when clicking outside
+      mobileMenuClickHandler = function(e) {
+        if (
+          !mobileMenu.classList.contains("hidden") &&
+          !mobileMenu.contains(e.target) &&
+          !mobileMenuBtn.contains(e.target)
+        ) {
+          window.toggleMobileMenu();
+        }
+      };
+      
+      document.addEventListener("click", mobileMenuClickHandler);
+    }
+    
+    setupMobileMenu();
   }
 
   // Initialize slide-in panel
@@ -200,7 +259,7 @@
     const navLinks = document.querySelectorAll(".nav-link:not(#dropdown-menu .nav-link)");
     const dropdownBtn = document.getElementById("dropdown-btn");
     const dropdownArrow = document.getElementById("dropdown-arrow");
-    const mobileMenuBtn = document.querySelector("#mobile-menu-btn svg");
+    const hamburgerIcon = document.getElementById("hamburger-icon");
 
     // Set initial white text (except active link)
     navLinks.forEach((link) => {
@@ -213,10 +272,6 @@
       dropdownBtn.classList.remove("text-brand-blueDark");
       dropdownBtn.classList.add("text-white");
     }
-    if (mobileMenuBtn) {
-      mobileMenuBtn.classList.remove("text-brand-blueDark");
-      mobileMenuBtn.classList.add("text-white");
-    }
 
     if (navbar) {
       window.addEventListener("scroll", () => {
@@ -228,16 +283,18 @@
           navLinks.forEach((link) => {
             if (!link.classList.contains("active-link")) {
               link.classList.remove("text-white");
-              link.classList.add("text-brand-blueDark",);
+              link.classList.add("text-brand-blueDark");
             }
           });
           if (dropdownBtn) {
             dropdownBtn.classList.remove("text-white");
-            dropdownBtn.classList.add("text-brand-blueDark",);
+            dropdownBtn.classList.add("text-brand-blueDark");
           }
+          // Change hamburger to dark
+          const mobileMenuBtn = document.getElementById("mobile-menu-btn");
           if (mobileMenuBtn) {
             mobileMenuBtn.classList.remove("text-white");
-            mobileMenuBtn.classList.add("text-brand-blueDark",);
+            mobileMenuBtn.classList.add("text-brand-blueDark");
           }
           if (navbarLogo) {
             navbarLogo.classList.remove("h-24", "mt-2");
@@ -258,6 +315,8 @@
             dropdownBtn.classList.remove("text-brand-blueDark");
             dropdownBtn.classList.add("text-white");
           }
+          // Change hamburger to white
+          const mobileMenuBtn = document.getElementById("mobile-menu-btn");
           if (mobileMenuBtn) {
             mobileMenuBtn.classList.remove("text-brand-blueDark");
             mobileMenuBtn.classList.add("text-white");
@@ -303,13 +362,16 @@
       loadComponent("form-placeholder", "components/form.html"),
     ]);
 
-    // Initialize functionality after components are loaded
-    highlightActiveLink();
-    initMobileMenu();
-    initDropdown();
-    initSlideInPanel();
-    initNavbarScroll();
-    initFloatingButtonVisibility();
+    // Wait for next frame to ensure DOM is fully processed
+    requestAnimationFrame(() => {
+      // Initialize functionality after components are loaded
+      highlightActiveLink();
+      initMobileMenu();
+      initDropdown();
+      initSlideInPanel();
+      initNavbarScroll();
+      initFloatingButtonVisibility();
+    });
   }
 
   // Run on DOM ready

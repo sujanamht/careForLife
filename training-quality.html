@@ -41,112 +41,134 @@
     <!-- Hero Section with Background -->
     <section 
       class="relative bg-cover bg-center bg-no-repeat"
-      style="background-image: url('assets/base.png'); height: 60vh;"
+      style="background-image: url('assets/base.png'); height: 50vh;"
     >
       <!-- Overlay -->
-      <div class="absolute inset-0 bg-white/50"></div>
+      <div class="absolute inset-0 bg-black/50"></div>
       
       <!-- Content positioned at bottom -->
-      <div class="absolute bottom-0 left-0 right-0 pb-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="max-w-2xl text-left">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-blue mb-4">
-              Training & Quality
-            </h1>
-            <p class="text-xl text-brand-blue/90 font-medium">
-              Our commitment to caregiver development and service quality.
-            </p>
-          </div>
-        </div>
+      <div class="absolute text-center bottom-0 left-0 right-0 pb-20">
+        <h2 class="sm:text-6xl text-5xl font-bold text-white font-title"><span class="text-brand-orange">Care for Life</span> Training & Quality</h2>
+      </div>
+
+      <!-- Curved Bottom Edge -->
+      <div class="absolute bottom-0 left-0 right-0 leading-none">
+        <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" class="w-full h-20 sm:h-24 md:h-28 block " preserveAspectRatio="none">
+          <path d="M0,40 Q360,120 720,90 Q1080,60 1440,40 L1440,120 L0,120 Z" fill="#F7F9FC"/>
+        </svg>
       </div>
     </section>
 
     <!-- Training Section -->
-    <section class="py-12 sm:py-16">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-4xl">
-          <h2 class="text-2xl font-bold text-brand-blue mb-6">Caregiver Training</h2>
-          <p class="text-text mb-8">
+    <section class="py-12 sm:py-16 bg-gradient-to-b from-surface to-white">
+      <div class="max-w-[90%] mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="">
+          <p class="text-brand-blue font-medium mb-2">Training & Quality</p>
+          <h1 class="font-title text-[46px] sm:text-5xl lg:text-6xl font-semibold text-brand-blueDark mb-8">
+            Caregiver <span class="text-brand-orange">Training</span>
+          </h1>
+          
+          <p class="text-text my-4 text-justify">
             All host home caregivers complete comprehensive training before providing services and participate in ongoing professional development. Training covers topics required by state regulations and best practices in the field.
           </p>
+        </div>
 
-          <h3 class="text-xl font-bold text-brand-blue mb-4">Training Topics Include:</h3>
-          <div class="grid sm:grid-cols-2 gap-4 mb-12">
-            <div class="flex items-start p-4 bg-surface rounded-lg">
-              <div class="w-8 h-8 bg-brand-green bg-opacity-10 rounded flex items-center justify-center mr-3 flex-shrink-0">
-                <svg class="w-4 h-4 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                </svg>
-              </div>
-              <div>
-                <h4 class="font-semibold text-brand-blue">Rights & Dignity</h4>
-                <p class="text-text text-sm">Understanding and protecting individual rights</p>
-              </div>
-            </div>
-            <div class="flex items-start p-4 bg-surface rounded-lg">
-              <div class="w-8 h-8 bg-brand-green bg-opacity-10 rounded flex items-center justify-center mr-3 flex-shrink-0">
-                <svg class="w-4 h-4 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                </svg>
-              </div>
-              <div>
-                <h4 class="font-semibold text-brand-blue">Confidentiality</h4>
-                <p class="text-text text-sm">Privacy practices and information protection</p>
+        <!-- Training Topics -->
+        <div class="mt-12">
+          <div class="text-center mb-12">
+            <h3 class="text-2xl font-bold text-brand-blueDark mb-4">Training Topics Include:</h3>
+          </div>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="relative group">
+              <div class="absolute -inset-0.5 bg-gradient-to-r from-brand-blue to-brand-green rounded-2xl opacity-20 group-hover:opacity-40 transition duration-300"></div>
+              <div class="relative bg-white p-6 rounded-2xl shadow-sm">
+                <div class="w-12 h-12 bg-gradient-to-br from-brand-blue to-brand-blue/70 rounded-xl flex items-center justify-center shadow-lg shadow-brand-blue/20 mb-4">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                  </svg>
+                </div>
+                <h4 class="text-lg font-bold text-brand-blueDark mb-2">Rights & Dignity</h4>
+                <p class="text-text/70 text-sm leading-relaxed">Understanding & protecting individual rights</p>
               </div>
             </div>
-            <div class="flex items-start p-4 bg-surface rounded-lg">
-              <div class="w-8 h-8 bg-brand-green bg-opacity-10 rounded flex items-center justify-center mr-3 flex-shrink-0">
-                <svg class="w-4 h-4 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                </svg>
-              </div>
-              <div>
-                <h4 class="font-semibold text-brand-blue">Abuse Prevention & Reporting</h4>
-                <p class="text-text text-sm">Recognizing, preventing, and reporting abuse, neglect, and exploitation</p>
-              </div>
-            </div>
-            <div class="flex items-start p-4 bg-surface rounded-lg">
-              <div class="w-8 h-8 bg-brand-green bg-opacity-10 rounded flex items-center justify-center mr-3 flex-shrink-0">
-                <svg class="w-4 h-4 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                </svg>
-              </div>
-              <div>
-                <h4 class="font-semibold text-brand-blue">Incident Reporting</h4>
-                <p class="text-text text-sm">Proper documentation and reporting of incidents</p>
+            
+            <div class="relative group">
+              <div class="absolute -inset-0.5 bg-gradient-to-r from-brand-green to-brand-orange rounded-2xl opacity-20 group-hover:opacity-40 transition duration-300"></div>
+              <div class="relative bg-white p-6 rounded-2xl shadow-sm">
+                <div class="w-12 h-12 bg-gradient-to-br from-brand-green to-brand-green/70 rounded-xl flex items-center justify-center shadow-lg shadow-brand-green/20 mb-4">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                  </svg>
+                </div>
+                <h4 class="text-lg font-bold text-brand-blueDark mb-2">Confidentiality</h4>
+                <p class="text-text/70 text-sm leading-relaxed">Privacy practices and information protection</p>
               </div>
             </div>
-            <div class="flex items-start p-4 bg-surface rounded-lg">
-              <div class="w-8 h-8 bg-brand-green bg-opacity-10 rounded flex items-center justify-center mr-3 flex-shrink-0">
-                <svg class="w-4 h-4 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                </svg>
-              </div>
-              <div>
-                <h4 class="font-semibold text-brand-blue">Emergency Preparedness</h4>
-                <p class="text-text text-sm">Planning for and responding to emergencies</p>
-              </div>
-            </div>
-            <div class="flex items-start p-4 bg-surface rounded-lg">
-              <div class="w-8 h-8 bg-brand-green bg-opacity-10 rounded flex items-center justify-center mr-3 flex-shrink-0">
-                <svg class="w-4 h-4 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                </svg>
-              </div>
-              <div>
-                <h4 class="font-semibold text-brand-blue">Documentation</h4>
-                <p class="text-text text-sm">Accurate record-keeping and service documentation</p>
+
+            <div class="relative group">
+              <div class="absolute -inset-0.5 bg-gradient-to-r from-brand-green to-brand-orange rounded-2xl opacity-20 group-hover:opacity-40 transition duration-300"></div>
+              <div class="relative bg-white p-6 rounded-2xl shadow-sm">
+                <div class="w-12 h-12 bg-gradient-to-br from-brand-green to-brand-green/70 rounded-xl flex items-center justify-center shadow-lg shadow-brand-green/20 mb-4">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                  </svg>
+                </div>
+                <h4 class="text-lg font-bold text-brand-blueDark mb-2">Emergency Preparedness</h4>
+                <p class="text-text/70 text-sm leading-relaxed">Planning for and responding to emergencies</p>
               </div>
             </div>
-            <div class="flex items-start p-4 bg-surface rounded-lg sm:col-span-2">
-              <div class="w-8 h-8 bg-brand-green bg-opacity-10 rounded flex items-center justify-center mr-3 flex-shrink-0">
-                <svg class="w-4 h-4 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                </svg>
+            
+            <div class="relative group">
+              <div class="absolute -inset-0.5 bg-gradient-to-r from-brand-orange to-brand-blue rounded-2xl opacity-20 group-hover:opacity-40 transition duration-300"></div>
+              <div class="relative bg-white p-6 rounded-2xl shadow-sm">
+                <div class="w-12 h-12 bg-gradient-to-br from-brand-orange to-brand-orange/70 rounded-xl flex items-center justify-center shadow-lg shadow-brand-orange/20 mb-4">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                  </svg>
+                </div>
+                <h4 class="text-lg font-bold text-brand-blueDark mb-2">Abuse Prevention & Reporting</h4>
+                <p class="text-text/70 text-sm leading-relaxed">Recognizing, preventing, and reporting abuse, neglect, and exploitation</p>
               </div>
-              <div>
-                <h4 class="font-semibold text-brand-blue">Person-Centered Practices</h4>
-                <p class="text-text text-sm">Supporting individual choice, preferences, and goals in service delivery</p>
+            </div>
+            
+            <div class="relative group">
+              <div class="absolute -inset-0.5 bg-gradient-to-r from-brand-blue to-brand-green rounded-2xl opacity-20 group-hover:opacity-40 transition duration-300"></div>
+              <div class="relative bg-white p-6 rounded-2xl shadow-sm">
+                <div class="w-12 h-12 bg-gradient-to-br from-brand-blue to-brand-blue/70 rounded-xl flex items-center justify-center shadow-lg shadow-brand-blue/20 mb-4">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                  </svg>
+                </div>
+                <h4 class="text-lg font-bold text-brand-blueDark mb-2">Incident Reporting</h4>
+                <p class="text-text/70 text-sm leading-relaxed">Proper documentation and reporting of incidents</p>
+              </div>
+            </div>
+            
+           
+            
+            <div class="relative group">
+              <div class="absolute -inset-0.5 bg-gradient-to-r from-brand-orange to-brand-blue rounded-2xl opacity-20 group-hover:opacity-40 transition duration-300"></div>
+              <div class="relative bg-white p-6 rounded-2xl shadow-sm">
+                <div class="w-12 h-12 bg-gradient-to-br from-brand-orange to-brand-orange/70 rounded-xl flex items-center justify-center shadow-lg shadow-brand-orange/20 mb-4">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                  </svg>
+                </div>
+                <h4 class="text-lg font-bold text-brand-blueDark mb-2">Documentation</h4>
+                <p class="text-text/70 text-sm leading-relaxed">Accurate record-keeping and service documentation</p>
+              </div>
+            </div>
+            
+            <div class="relative group sm:col-span-2 lg:col-span-1">
+              <div class="absolute -inset-0.5 bg-gradient-to-r from-brand-blue to-brand-green rounded-2xl opacity-20 group-hover:opacity-40 transition duration-300"></div>
+              <div class="relative bg-white p-6 rounded-2xl shadow-sm">
+                <div class="w-12 h-12 bg-gradient-to-br from-brand-blue to-brand-blue/70 rounded-xl flex items-center justify-center shadow-lg shadow-brand-blue/20 mb-4">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                  </svg>
+                </div>
+                <h4 class="text-lg font-bold text-brand-blueDark mb-2">Person-Centered Practices</h4>
+                <p class="text-text/70 text-sm leading-relaxed">Supporting individual choice, preferences, and goals in service delivery</p>
               </div>
             </div>
           </div>
@@ -156,54 +178,118 @@
 
     <!-- Ongoing Development -->
     <section class="py-12 sm:py-16 bg-surface">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl">
-          <h2 class="text-2xl font-bold text-brand-blue mb-6">Ongoing Development</h2>
-          <p class="text-text mb-6">
-            Training is not a one-time event. Caregivers participate in ongoing education and competency verification to maintain and enhance their skills.
-          </p>
-          <ul class="space-y-3">
-            <li class="flex items-start">
-              <span class="w-2 h-2 bg-brand-orange rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <span class="text-text">Annual refresher training on core topics</span>
-            </li>
-            <li class="flex items-start">
-              <span class="w-2 h-2 bg-brand-orange rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <span class="text-text">Competency assessments to verify skill application</span>
-            </li>
-            <li class="flex items-start">
-              <span class="w-2 h-2 bg-brand-orange rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <span class="text-text">Individual-specific training based on support needs</span>
-            </li>
-            <li class="flex items-start">
-              <span class="w-2 h-2 bg-brand-orange rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <span class="text-text">Access to additional learning opportunities</span>
-            </li>
-          </ul>
+      <div class="max-w-[90%] mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-12">
+            <div class="inline-flex items-center gap-2 mb-2">
+              <span class="text-brand-blueDark font-medium text-sm tracking-wide">Professional Development</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-blueDark mb-6">
+              Ongoing <span class="text-brand-orange">Development</span>
+            </h2>
+            <p class="text-text/70 text-lg max-w-3xl mx-auto leading-relaxed">
+              Training is not a one-time event. Caregivers participate in ongoing education and competency verification to maintain and enhance their skills.
+            </p>
+          </div>
+          
+          <div class="relative group">
+            <div class="absolute -inset-0.5 bg-gradient-to-r from-brand-green to-brand-orange rounded-2xl opacity-20 group-hover:opacity-40 transition duration-300"></div>
+            <div class="relative bg-white p-8 sm:p-10 rounded-2xl shadow-sm">
+              <ul class="space-y-4">
+                <li class="flex items-start gap-4 p-4 bg-surface/50 rounded-xl hover:bg-surface transition-colors">
+                  <div class="w-8 h-8 bg-brand-orange/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg class="w-4 h-4 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                  </div>
+                  <span class="text-text font-medium">Annual refresher training on core topics</span>
+                </li>
+                <li class="flex items-start gap-4 p-4 bg-surface/50 rounded-xl hover:bg-surface transition-colors">
+                  <div class="w-8 h-8 bg-brand-orange/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg class="w-4 h-4 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                  </div>
+                  <span class="text-text font-medium">Competency assessments to verify skill application</span>
+                </li>
+                <li class="flex items-start gap-4 p-4 bg-surface/50 rounded-xl hover:bg-surface transition-colors">
+                  <div class="w-8 h-8 bg-brand-orange/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg class="w-4 h-4 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                  </div>
+                  <span class="text-text font-medium">Individual-specific training based on support needs</span>
+                </li>
+                <li class="flex items-start gap-4 p-4 bg-surface/50 rounded-xl hover:bg-surface transition-colors">
+                  <div class="w-8 h-8 bg-brand-orange/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg class="w-4 h-4 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                  </div>
+                  <span class="text-text font-medium">Access to additional learning opportunities</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Quality Assurance -->
     <section class="py-12 sm:py-16">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl">
-          <h2 class="text-2xl font-bold text-brand-blue mb-6">Quality Assurance</h2>
-          <p class="text-text mb-8">
-            We maintain quality assurance practices to help ensure services meet expectations and regulatory requirements.
-          </p>
-          <div class="space-y-6">
-            <div class="bg-surface p-6 rounded-xl border border-gray-100">
-              <h3 class="font-semibold text-lg text-brand-blue mb-2">Monitoring</h3>
-              <p class="text-text text-sm">Regular oversight visits to host homes, observation of service delivery, and check-ins with individuals and caregivers.</p>
+      <div class="max-w-[90%] mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-12">
+            <div class="inline-flex items-center gap-2 mb-2">
+              <span class="text-brand-blueDark font-medium text-sm tracking-wide">Quality Assurance</span>
             </div>
-            <div class="bg-surface p-6 rounded-xl border border-gray-100">
-              <h3 class="font-semibold text-lg text-brand-blue mb-2">Documentation Review</h3>
-              <p class="text-text text-sm">Periodic review of service records, incident reports, and other documentation to identify areas for improvement.</p>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-blueDark mb-6">
+              Quality <span class="text-brand-orange">Assurance</span>
+            </h2>
+            <p class="text-text/70 text-lg max-w-3xl mx-auto leading-relaxed">
+              We maintain quality assurance practices to help ensure services meet expectations and regulatory requirements.
+            </p>
+          </div>
+          
+          <div class="grid sm:grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="relative group">
+              <div class="absolute -inset-0.5 bg-gradient-to-r from-brand-blue to-brand-green rounded-2xl opacity-20 group-hover:opacity-40 transition duration-300"></div>
+              <div class="relative bg-white p-8 rounded-2xl shadow-sm">
+                <div class="w-14 h-14 bg-gradient-to-br from-brand-blue to-brand-blue/70 rounded-xl flex items-center justify-center shadow-lg shadow-brand-blue/20 mb-6">
+                  <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-brand-blueDark mb-3">Monitoring</h3>
+                <p class="text-text/70 leading-relaxed">Regular oversight visits to host homes, observation of service delivery, and check-ins with individuals and caregivers.</p>
+              </div>
             </div>
-            <div class="bg-surface p-6 rounded-xl border border-gray-100">
-              <h3 class="font-semibold text-lg text-brand-blue mb-2">Continuous Improvement</h3>
-              <p class="text-text text-sm">Using feedback, data, and identified trends to improve training, support, and service delivery practices.</p>
+            
+            <div class="relative group">
+              <div class="absolute -inset-0.5 bg-gradient-to-r from-brand-green to-brand-orange rounded-2xl opacity-20 group-hover:opacity-40 transition duration-300"></div>
+              <div class="relative bg-white p-8 rounded-2xl shadow-sm">
+                <div class="w-14 h-14 bg-gradient-to-br from-brand-green to-brand-green/70 rounded-xl flex items-center justify-center shadow-lg shadow-brand-green/20 mb-6">
+                  <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-brand-blueDark mb-3">Documentation Review</h3>
+                <p class="text-text/70 leading-relaxed">Periodic review of service records, incident reports, and other documentation to identify areas for improvement.</p>
+              </div>
+            </div>
+            
+            <div class="relative group">
+              <div class="absolute -inset-0.5 bg-gradient-to-r from-brand-orange to-brand-blue rounded-2xl opacity-20 group-hover:opacity-40 transition duration-300"></div>
+              <div class="relative bg-white p-8 rounded-2xl shadow-sm">
+                <div class="w-14 h-14 bg-gradient-to-br from-brand-orange to-brand-orange/70 rounded-xl flex items-center justify-center shadow-lg shadow-brand-orange/20 mb-6">
+                  <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-brand-blueDark mb-3">Continuous Improvement</h3>
+                <p class="text-text/70 leading-relaxed">Using feedback, data, and identified trends to improve training, support, and service delivery practices.</p>
+              </div>
             </div>
           </div>
         </div>
